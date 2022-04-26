@@ -150,13 +150,47 @@ ul.member li {
     width: 400px;
     height: 48px;
     margin: 0px auto;
+    padding: 0px;
 }
 
-#inputId {
-    width: 300px;
-    height: 40px;
-    padding: 0;
-    border: 0;
+#id {
+    border: 0px;
+}
+
+#password {
+    border: 0px;
+}
+
+#password_confirm {
+    border: 0px;
+}
+
+#name {
+    border: 0px;
+}
+
+#phone {
+    border: 0px;
+}
+
+#id:focus {
+    outline: none;
+}
+
+#password:focus {
+    outline: none;
+}
+
+#password_confirm:focus {
+    outline: none;
+}
+
+#name:focus {
+    outline: none;
+}
+
+#phone:focus {
+    outline: none;
 }
 
 .wrapper{
@@ -229,12 +263,13 @@ ul.member li {
     border: 1px solid #CACACA;
     border-radius: 4px;
     padding: 0px 42px 0px 16px;
+    
 }
 
 .id .phone {
     width: 335px;
-}
 
+}
 
 .input_wrapper .input_container {
     position: relative;
@@ -250,9 +285,11 @@ ul.member li {
 .input_wrapper .input_certification{
     padding: 0px 60px 0px 16px;
 }
+
 .input_wrapper {
     border-color: #777777;
 }
+
 .input_wrapper .input_container input{
     width: 100%;
     font-style: normal;
@@ -262,6 +299,7 @@ ul.member li {
     letter-spacing: -0.25px;
     color: #333333;
 }
+
 .input_wrapper .input_container input::placeholder {
     color: #CACACA;
 }

@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle:wght@300;400;700&family=Gamja+Flower&family=Jua&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Pen+Script&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/myhomepage.css">
+    <link rel="stylesheet" href="./css/signin.css">
     <script src="./js/myhomepage.js"></script>
     <title>signin</title>
 </head>
@@ -52,10 +52,37 @@
 				<hr class="line2">
 				<div>
 					<article class="signin">
+						<br><br><br>
 						<div class="signinTtitle">
 							<h3>로그인</h3>
+							<br><br><br>
+								<form id="login-form" class="form-area">
+									<div class="input-wrapper">
+										<div class="input-container id-input">
+											<input id="input-user-id" type="text" name="userId" placeholder="아이디">
+										</div>
+										<p id="error-user-id" class="error-item"></p>
+									</div>
+									<div class="input-wrapper">
+										<div class="input-container password-input">
+											<input id="input-password" name="password" type="password" placeholder="비밀번호">
+										</div>
+										<p id="error-password" class="error-item"></p>
+									</div>
+									<br>
+									<div class="row">
+										<div class="checkbox-auto-login-container auto-login-item">
+											<input name="auto_login" type="checkbox" id="auto-login">
+											<label id="auto-login-label" for="auto-login"><span></span><p>자동 로그인</p></label>
+										</div>
+										<a href="findId.html" class="link-find-id-item">아이디 찾기</a>
+										<div class="link-divider-item"></div>
+										<a href="findPassword.html" class="link-find-password-item">비밀번호 찾기</a>
+									</div>
+									<br><br>
+									<button type="submit" class="btn-login">로그인</button>
+								</form>
 						</div>
-
 					</article>
 				</div>
 			</section>

@@ -1,5 +1,130 @@
+#container {
+	background-color:#fff;
+	width: 1024px;
+	height: 2160px;
+	margin: 0 auto;
+}
 
-.aboutMe_aboutMe .AboutMe_content__2uEf5 {
+hr.line2{
+	border-top: 3px solid rgb(24,189,222);
+	border-radius: 15%;
+	margin: 0px 0px 5px;
+}	
+
+/* ==================================== header ====================================== */
+
+header {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color:#fff;
+	padding: 1px 5px;
+	margin: 0px 0px 30px
+}
+
+.mainTitle {
+	height: 150px;
+}
+
+header h1 {
+	color:  rgb(24,189,222);
+	font-family: 'Oleo Script', cursive;
+	font-style: italic;
+	font-size: 80px;
+	text-shadow: 4px 2px 0px orange;
+	margin: 10px 0px 0px;
+	width: 450px;
+}
+
+header h2 {
+	color: orange;
+	font-size: 40px;
+	font-family: 'Jua', sans-serif;
+	text-shadow: 2px 2px 2px orangered;
+	margin: 25px;
+}
+
+header a {
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 40px;
+	border-radius: 7%;
+	text-shadow: 1px 0px 0px skyblue;
+	margin: 5px;
+	color: rgb(24,189,222);
+	text-decoration: none;
+	border-right: 1px #fff solid;
+	width: 8em;
+	height: 2.5em;
+}
+
+header a:hover {
+	color: #fff;
+	background-color: rgb(24,189,222);
+}
+
+#subTitle {
+	margin: 0px 600px 10px 10px;
+}
+
+ul.navi {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	margin: 0px 0px 0px 420px;
+	width: 575px;
+	height: 50px
+}
+
+ul.navi li {
+	list-style: none;
+	margin: 0 auto;
+	height: 40px;
+	width: 250px;
+}
+
+ul.navi li a {
+	text-shadow: 1px 0px 0px skyblue;
+}
+
+ul.li div, ul.navi div, header li div {
+	display: none;
+}
+
+ul.member > li:hover div, ul.navi > li:hover div  {
+	display: block; 
+}
+
+ul.member {
+	list-style: none; 
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: right;
+	padding: 0px;
+	width: 300px;
+}
+ 
+ul.member a {
+	font-family: 'Jua', sans-serif;
+	font-size: 25px;
+	color: orange;
+	text-shadow: 2px 2px 2px orangered;
+}
+
+ul.member li {
+	border-radius: 25%;
+	list-style: none;
+	text-align: center;
+	width: 6em;
+	height: 2.5em;
+}
+
+.aboutMe_aboutMe .AboutMe_content {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -7,6 +132,13 @@
     max-width: 71.25rem;
     padding: 4rem 2rem;
     margin: 0 auto;
+
+}
+/* ======================================================== section ========================================================== */
+
+#content {
+    width: 1024px;
+    height: 2500px;
 }
 
 .sectionTitle_sectionTitle {
@@ -45,7 +177,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     -webkit-box-pack: justify;
-
 }
 
 .aboutMe_basic_info_wrapper {
@@ -83,4 +214,136 @@
 .aboutMe_basic_infos img {
     width: 50px;
     height: 50px; 
+}
+
+.aboutMe_skills_infos_frontend {
+    
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    width: 330px;
+    align-items: center;
+    margin: 0px 0px 0px 150px;
+}
+
+.aboutMe_skills_infos_backend {
+    
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-pack: justify;
+    width: 330px;
+    margin: 0px 0px 0px 150px;
+}
+
+.aboutMe_skills_infos_database {
+    
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-pack: justify;
+    width: 330px;
+    margin: 0px 0px 0px 150px;
+}
+
+.aboutMe_skills_info_wrapper {
+    display: flex;
+    margin-bottom: 2rem;
+    width: 110px;
+}
+
+.aboutMe_skills_info {
+    width: 100px;
+    height: 100px;
+    flex-flow: row wrap;
+}
+
+#aboutMe_html_icon_img {
+    width: 100px;
+    height: 100px; 
+}
+
+#aboutMe_css_icon_img {
+    width: 100px;
+    height: 100px; 
+}
+
+#aboutMe_javascript_icon_img {
+    width: 105px;
+    height: 106px; 
+}
+
+.aboutMe_skills_infos_backend img {
+    width: 100px;
+    height: 100px; 
+}
+.aboutMe_skills_infos_database img {
+    width: 100px;
+    height: 100px; 
+}
+.aboutMe_skills_field_label {
+    font-family: Black Han Sans,sans-serif;
+    font-size: 2.5rem;
+}
+
+#certificates_table th {
+    font-family: Black Han Sans,sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    padding: 0px 20px;
+}
+
+#certificates_table td {
+    font-family: 'Jua', sans-serif;
+    font-size: 1.3rem;
+    padding: 0px 18px;
+}
+
+#qnet_icon {
+    width: 100px;
+    height: 100px;
+}
+
+#gtelp_icon {
+    width: 120px;
+    height: 36px;
+}
+
+#history_icon {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+/* ==================================== aside ====================================== */
+
+aside #members {
+	border-radius: 25%;
+	margin: 8px;
+	color: rgb(24,189,222);
+	text-decoration: none;
+	border-right: 1px #fff solid;	
+}
+
+/* =============================== footer ====================================== */
+
+footer {
+	background-color: #fff;
+	clear: both;
+	width: 1024px;
+	height: 100px;
+}
+
+footer h3 {
+	padding: 15px 5px 0px;
+	margin: 5px 5px;
+}
+
+footer p {
+	text-align: center;
+	margin: 0 auto;
 }
