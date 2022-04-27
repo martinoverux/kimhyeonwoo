@@ -1,226 +1,49 @@
+function searchAddress() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
-        $('#form-signup input').each(function(){
-            $(this).on("input", function(){
-                availableSignUp()
-            });
-        });
+            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+            var addr = ''; // 주소 변수
+            var extraAddr = ''; // 참고항목 변수
 
-        function availableSignUp(){
-            const isEmpty = false;
-            $('#form-signup input').each(function(){
-                if($(this).attr('id') == 'email' || $(this).attr('id') == 'emailauth-check-value'){
-                    if($('#email').val().length != 0 && $('#emailauth-check-value').val().length == 0){
-                        isEmpty = true;
-                    }   
-                }
-                else{
-                   
-                    if($(this).attr('type') != 'hidden' 
-                        && $.inArray($(this).attr('id'), uncheckList) < 0
-                        && $(this).val().length == 0){
-                        isEmpty = true;
-                    }
-                }
-            });
-
-            if(isEmpty){
-                $('#btn-signup').prop('disabled', true);
-                $('#btn-signup').addClass('btn-disabled');
+            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                addr = data.roadAddress;
+            } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                addr = data.jibunAddress;
             }
-            else{
-                $('#btn-signup').prop('disabled', false);
-                $('#btn-signup').removeClass('btn-disabled');
+
+            // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+            if(data.userSelectedType === 'R'){
+                // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                    extraAddr += data.bname;
+                }
+                // 건물명이 있고, 공동주택일 경우 추가한다.
+                if(data.buildingName !== '' && data.apartment === 'Y'){
+                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                }
+                // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                if(extraAddr !== ''){
+                    extraAddr = ' (' + extraAddr + ')';
+                }
+                // 조합된 참고항목을 해당 필드에 넣는다.
+                document.getElementById("extraAddress").value = extraAddr;
+            
+            } else {
+                document.getElementById("extraAddress").value = '';
             }
+
+   
+            console.log();
+            // 우편번호와 주소 정보를 해당 필드에 넣는다.
+            document.getElementById('postcode').value = data.zonecode;
+            document.getElementById("address").value = addr;
+            // 커서를 상세주소 필드로 이동한다.
+            document.getElementById("detailAddress").focus();
         }
-
-        $('#id').setValidationId('error-id');
-        $('#password').setValidationPassword('error-password', 'id');
-        $('#password-confirm').setValidationPasswordConfirm('error-password-confirm', 'password')
-        $('#hp').setValidationPhone('error-hp');
-        $('#email').setValidationEmail('error-email');
-
-        function checkId() {
-            $('#error-id').hideError();
-            $('#success-id').hideError();
-            const id = $('#id').val();
-
-            $.ajax({
-                "url": '/check-id',
-                "type": "GET",
-                "data": {
-                    id: id
-                },
-                success: function(response){
-                    $('#success-id').text(response.msg);
-                    $('#success-id').showError();
-                },
-                error: function(request, status, err) {
-                    const response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $("#"+response.data.id).showError(response.data.content);
-                        $("#"+response.data.focusId).focus();
-                    }
-                }
-            });
-        }
-
-
-
-        const smsAuthTimer =  new AuthTimer('smsauth-check-count');
-        function reqSmsAuth() {
-            $('#error-hp').hideError();
-            $('#success-smsauth-check').hideError();
-            $('#error-smsauth-check').hideError();
-
-            const hp = $('#hp').val();
-            $.ajax({
-                "url": '/smsauth-req',
-                "type": "POST",
-                "data": {
-                    refer: "signup",
-                    hp: hp,
-                },
-                success: function(response){
-                    $('#smsauth-check-value').val('');
-                    $('#smsauth-check-area').show();
-                    smsAuthTimer.startTimer();
-                },
-                error: function(request, status, err) {
-                    const response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $('#error-hp').showError(response.msg);
-                    }
-                }
-            });
-        }
-
-        function checkSmsAuth() {
-            $('#error-hp').hideError();
-            $('#success-smsauth-check').hideError();
-            $('#error-smsauth-check').hideError();
-
-            const hp = $('#hp').val();
-            const authNumber = $('#smsauth-check-value').val();
-            $.ajax({
-                "url": '/smsauth-check',
-                "type": "POST",
-                "data": {
-                    refer: "signup",
-                    hp: hp,
-                    auth_number: authNumber,
-                },
-                success: function(response){
-                    smsAuthTimer.stopTimer();
-                    $('#success-smsauth-check').show();
-                    $('#success-smsauth-check').text(response.msg);
-                },
-                error: function(request, status, err) {
-                    const response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $('#error-smsauth-check').showError(response.msg);
-                    }
-                }
-            });
-        }
-
-
-        const emailAuthTimer =  new AuthTimer('emailauth-check-count');
-        function reqEmailAuth() {
-            $('#error-email').hideError();
-            $('#success-emailauth-check').hideError();
-            $('#error-emailauth-check').hideError();
-
-            const email = $('#email').val();
-            $.ajax({
-                "url": '/emailauth-req',
-                "type": "POST",
-                "data": {
-                    refer: "signup",
-                    email: email,
-                },
-                success: function(response){
-                    console.log(response);
-                    $('#emailauth-check-value').val('');
-                    $('#emailauth-check-area').show();
-                    emailAuthTimer.startTimer();
-                },
-                error: function(request, status, err) {
-                    const response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $('#error-email').showError(response.msg);
-                    }
-                }
-            });
-        }
-        function checkEmailAuth() {
-            $('#error-email').hideError();
-            $('#success-emailauth-check').hideError();
-            $('#error-emailauth-check').hideError();
-
-            const email = $('#email').val();
-            const authNumber = $('#emailauth-check-value').val();
-            $.ajax({
-                "url": '/emailauth-check',
-                "type": "POST",
-                "data": {
-                    refer: "signup",
-                    email: email,
-                    auth_number: authNumber,
-                },
-                success: function(response){
-                    emailAuthTimer.stopTimer();
-                    $('#success-emailauth-check').show();
-                    $('#success-emailauth-check').text(response.msg);
-                },
-                error: function(request, status, err) {
-                    const response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $('#error-emailauth-check').showError(response.msg);
-                    }
-                }
-            });
-        }
-
-        $("#form-signup").submit(function(e){
-            e.preventDefault();
-
-            $(this).find('.error-item').hideError();
-            $(this).find('.success-item').hideError();
-
-            const form = $(this);
-            $.ajax({
-                "url": '/signup',
-                "type": "POST",
-                "data": form.serialize(),
-                success: function(response){
-                        window.location.href = response.redirect_url;
-                },
-                error: function(request, status, err) {
-                    var response = request.responseJSON
-                    if(request.status == 500){
-                        alert(response.msg);
-                    }
-                    else{
-                        $("#"+response.data.id).showError(response.data.content);
-                        $("#"+response.data.focusId).focus();
-                    }
-                }
-            });
-            return false;
-        })
-    
+    }).open();
+}

@@ -8,7 +8,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle:wght@300;400;700&family=Gamja+Flower&family=Jua&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Pen+Script&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/signup.css">
-    <script src="./js/myhomepage.js"></script>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="./js/signup.js"></script>
     <title>signup</title>
 </head>
     <body>
@@ -59,10 +60,7 @@
 						<div class="row_area">
 							<div class="input_wrapper_check">
 								<div class="input_container">
-									<input type="text" id="id" name="id" placeholder="아이디 입력(6~16자 영문자)">
-									<!-- <div class="delete_btn">
-										<img src="./images/close.png" alt="취소 아이콘">
-									</div> -->
+									<input type="text" id="id" name="id" placeholder="아이디 입력(6~16자 영문)" required>
 								</div>
 								<p id="error_id" class="error_item"></p>
 								<p id="success_id" class="success_item"></p>
@@ -75,19 +73,13 @@
 						</p>
 						<div class="input_wrapper">
 							<div class="input_container">
-								<input type="text" id="password" name="password" placeholder="비밀번호 입력(5~16자 영,숫자 혼합)">
-								<!-- <div class="delete_btn">
-									<img src="./images/close.png" alt="취소 아이콘">
-								</div> -->
+								<input type="text" id="password" name="password" placeholder="비밀번호 입력(5~16자 영,숫자 혼합)" required>
 							</div>	
 							<p class="error_item" id="error_password"></p>
 						</div>
 						<div class="input_wrapper">
 							<div class="input_container">
-								<input type="password" id="password_confirm" name="password_confirm" placeholder="비밀번호 재입력">
-								<!-- <div class="delete_btn">
-									<img src="./images/close.png" alt="취소 아이콘">
-								</div> -->
+								<input type="password" id="password_confirm" name="password_confirm" placeholder="비밀번호 재입력" required>
 							</div>
 							<p class="error_password_confrim" id="error_item"></p>
 						</div>
@@ -97,10 +89,7 @@
 						</p>
 						<div class="input_wrapper">
 							<div class="input_container">
-								<input type="text" id="name" name="name" placeholder="이름 입력">
-								<!-- <div class="delete_btn">
-									<img src="./images/close.png" alt="취소 아이콘">
-								</div> -->
+								<input type="text" id="name" name="name" placeholder="이름 입력" required>
 							</div>
 							<p id="error_name" class="error_item"></p>
 						</div>
@@ -111,16 +100,13 @@
 						<div class="row_area">
 							<div class="input_wrapper_check">
 								<div class="input_container">
-									<input type="tel" id="phone" name="phone" placeholder="휴대폰 번호 입력(- 없이)">
-									<!-- <div class="delete_btn">
-										<img src="./images/close.png" alt="취소 아이콘">
-									</div> -->
+									<input type="tel" id="phone" name="phone" placeholder="휴대폰 번호 입력(- 없이)" required>
 								</div>
 								<p id="error_phone" class="error_item"></p>
 							</div>
-							<button onclick="reqSmsAuth();" type="button" class="btn_white">인증번호 전송</button>
+							<!-- <button onclick="reqSmsAuth();" type="button" class="btn_white">인증번호 전송</button> -->
 						</div>
-						<div id="smsauth_check_area" class="row_area">
+						<!-- <div id="smsauth_check_area" class="row_area">
 							<div class="input_wrapper_certification_num">
 								<div class="input_container_certification">
 									<input type="text" id="smsauth_check_value" name="smsauth_check_value" type="tel" placeholder="인증번호를 입력하세요.">
@@ -130,10 +116,50 @@
 								<p id="success_smsauth_check" class="success_item"></p>
 							</div>
 							<button onclick="checkSmsAuth();" type="button" class="btn_certification">인증</button>
-						</div>
+						</div> -->
 					</div>
 
-				
+					<div class="signupInfoOption">
+						<p class="input_id">
+							주소
+						</p>
+						<div class="row_area">
+							<div class="address">
+								<div class="input_container_postCode">
+									<input type="text" id="postcode" name="postcode" placeholder="우편번호">
+								</div>
+							</div>
+							<button onclick="searchAddress();" type="button" class="btn_blue">주소 찾기</button>
+						</div>
+						<div class="row_area">
+							<div class="address">
+								<div class="input_container">
+									<input type="text" id="address" name="address" placeholder="기본주소">
+								</div>
+								<div class="input_container">
+									<input type="text" id="address_detail" name="address_detail" placeholder="상세주소">
+								</div>
+								<div class="input_container">
+									<input type="text" id="extraAddress" name="extraAddress" placeholder="참고사항">
+								</div>
+								<p id="error_address" class="error_item"></p>
+								<p id="success_address" class="success_item"></p>
+							</div>
+					
+						</div>
+						<p class="input_password">
+							생년월일
+						</p>
+						<div class="input_wrapper">
+							<div class="input_container_birth">
+								<input type="date" id="birth" name="birth" placeholder="생년월일 입력(ex:20220101)">
+							</div>	
+							<p class="error_item" id="error_birth"></p>
+							<p id="success_birth" class="success_item"></p>
+						</div>
+					</div>
+					<br><br>
+					<button type="submit" class="btn-signup">회원가입</button>
 				</form>
 			</section>
 
