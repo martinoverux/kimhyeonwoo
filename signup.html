@@ -50,7 +50,7 @@
 			</header>
 			<section id="content">  
 				<hr class="line2">
-				<form class="form" action="">
+				<form class="form" action="" onsubmit="signUpVaildate();">
 					<p class="signupTitle">회원정보 입력</p>
 					<div class="signupInfoNecessary">
 						<p class="input_id">
@@ -62,8 +62,6 @@
 								<div class="input_container">
 									<input type="text" id="id" name="id" placeholder="아이디 입력(6~16자 영문)" required>
 								</div>
-								<p id="error_id" class="error_item"></p>
-								<p id="success_id" class="success_item"></p>
 							</div>
 							<button onclick="checkId()" type="button" class="btn_blue">중복 확인</button>
 						</div>
@@ -73,15 +71,13 @@
 						</p>
 						<div class="input_wrapper">
 							<div class="input_container">
-								<input type="text" id="password" name="password" placeholder="비밀번호 입력(5~16자 영,숫자 혼합)" required>
+								<input type="text" id="password" name="password" placeholder="비밀번호 입력(숫자/문자/특수문자 각1개이상)" required>
 							</div>	
-							<p class="error_item" id="error_password"></p>
 						</div>
 						<div class="input_wrapper">
 							<div class="input_container">
 								<input type="password" id="password_confirm" name="password_confirm" placeholder="비밀번호 재입력" required>
 							</div>
-							<p class="error_password_confrim" id="error_item"></p>
 						</div>
 						<p class="input_name">
 							이름
@@ -89,9 +85,8 @@
 						</p>
 						<div class="input_wrapper">
 							<div class="input_container">
-								<input type="text" id="name" name="name" placeholder="이름 입력" required>
+								<input type="text" id="user_name" name="user_name" placeholder="이름 입력" required>
 							</div>
-							<p id="error_name" class="error_item"></p>
 						</div>
 						<p class="input_phone">
 							휴대폰 번호
@@ -102,7 +97,6 @@
 								<div class="input_container">
 									<input type="tel" id="phone" name="phone" placeholder="휴대폰 번호 입력(- 없이)" required>
 								</div>
-								<p id="error_phone" class="error_item"></p>
 							</div>
 							<!-- <button onclick="reqSmsAuth();" type="button" class="btn_white">인증번호 전송</button> -->
 						</div>
@@ -117,9 +111,22 @@
 							</div>
 							<button onclick="checkSmsAuth();" type="button" class="btn_certification">인증</button>
 						</div> -->
+						<p class="input_email">
+							이메일
+							<span>*</span>
+						</p>
+						<div class="input_wrapper">
+							<div class="input_container">
+								<input type="text" id="email" name="email" placeholder="이메일 입력" required>
+							</div>
+						</div>
 					</div>
 
 					<div class="signupInfoOption">
+						<div class="signupInfoOptionTitle">
+							<p class="signupTitle">선택사항 입력</p>
+							<hr>
+						</div>
 						<p class="input_id">
 							주소
 						</p>
@@ -142,24 +149,46 @@
 								<div class="input_container">
 									<input type="text" id="extraAddress" name="extraAddress" placeholder="참고사항">
 								</div>
-								<p id="error_address" class="error_item"></p>
-								<p id="success_address" class="success_item"></p>
 							</div>
 					
 						</div>
-						<p class="input_password">
+						<p class="input_birth">
 							생년월일
 						</p>
-						<div class="input_wrapper">
+						<div class="row_area_bir">
 							<div class="input_container_birth">
-								<input type="date" id="birth" name="birth" placeholder="생년월일 입력(ex:20220101)">
-							</div>	
-							<p class="error_item" id="error_birth"></p>
-							<p id="success_birth" class="success_item"></p>
+								<div id="birth_year">
+									<input type="text" id="year" maxlength="4" placeholder="년(4자)">
+								</div>
+							</div>
+							<div class="input_container_birth">
+								<div id="birth_month">
+										<select id="month">
+											<option>월</option>
+											<option value="01">1</option>
+											<option value="02">2</option>
+											<option value="03">3</option>
+											<option value="04">4</option>
+											<option value="05">5</option>
+											<option value="06">6</option>
+											<option value="07">7</option>
+											<option value="08">8</option>
+											<option value="09">9</option>                                    
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+								</div>
+							</div>
+							<div class="input_container_birth">
+								<div id="birth_day">
+									<input type="text" id="day" maxlength="2" placeholder="일">
+								</div>
+							</div>
 						</div>
 					</div>
 					<br><br>
-					<button type="submit" class="btn-signup">회원가입</button>
+					<button type="submit" class="btn-signup" onclick="">회원가입</button>
 				</form>
 			</section>
 

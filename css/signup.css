@@ -175,8 +175,14 @@ body form > p {
     font-size: 1rem;
     border: 0px;
 }
+#email {
+    width: 280px;
+    height: 42px;
+    font-size: 1rem;
+    border: 0px;
+}
 
-#name {
+#user_name {
     width: 280px;
     height: 42px;
     font-size: 1rem;
@@ -185,16 +191,16 @@ body form > p {
 
 
 #password {
-    width: 280px;
+    width: 350px;
     height: 42px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: 0px;
 }
 
 #password_confirm {
     width: 280px;
     height: 42px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: 0px;
 }
 
@@ -210,11 +216,15 @@ body form > p {
     outline: none;
 }
 
-#name:focus {
+#user_name:focus {
     outline: none;
 }
 
 #phone:focus {
+    outline: none;
+
+}
+#email:focus {
     outline: none;
 }
 
@@ -387,7 +397,7 @@ body form > p {
     background: #FFFFFF;
     border: 1px solid #CACACA;
     border-radius: 4px;
-    padding: 0px 42px 0px 16px;
+    padding: 0px 42x 0px 16px;
     
 }
 .input_wrapper .input_certification{
@@ -496,6 +506,60 @@ body form > p {
     letter-spacing: -0.25px;
 }
 
+.row_area_bir{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    width: 300px;
+    margin: 8px auto;
+}
+
+.input_container_birth {
+    width: 62px;
+    padding: 0;
+}
+
+#year {
+    width: 60px;
+    height: 38px;
+    font-size: 1.1rem;
+    border: 0px;
+    padding: 0;
+}
+#month {
+    width: 60px;
+    height: 38px;
+    font-size: 1.1rem;
+    border: 0px;
+    padding: 0;
+}
+#day {
+    width: 60px;
+    height: 38px;
+    font-size: 1.1rem;
+    border: 0px;
+    padding: 0;
+}
+
+#year:focus {
+    outline: none;
+}
+#month:focus {
+    outline: none;
+}
+
+#day:focus {
+    outline: none;
+}
+
+.signupInfoOptionTitle {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.signupInfoOptionTitle p {
+    font-size: 5rem;
+}
 
 /* ==================================== aside ====================================== */
 
