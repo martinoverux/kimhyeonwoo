@@ -1,16 +1,3 @@
-#container {
-	background-color:#fff;
-	width: 1024px;
-	height: 2160px;
-	margin: 0 auto;
-}
-
-hr.line2{
-	border-top: 3px solid rgb(24,189,222);
-	border-radius: 15%;
-	margin: 0px 0px 5px;
-}	
-
 /* ==================================== header ====================================== */
 
 header {
@@ -51,13 +38,16 @@ header a {
 	font-family: 'Nanum Pen Script', cursive;
 	font-size: 40px;
 	border-radius: 7%;
-	text-shadow: 1px 0px 0px skyblue;
 	margin: 5px;
 	color: rgb(24,189,222);
 	text-decoration: none;
 	border-right: 1px #fff solid;
 	width: 8em;
 	height: 2.5em;
+}
+
+.subExploreCulture a {
+    font-size: 30px;
 }
 
 header a:hover {
@@ -74,8 +64,8 @@ ul.navi {
 	display: flex;
 	flex-direction: row;
 	justify-content: right;
-	margin: 0px 0px 0px 420px;
-	width: 575px;
+	margin: 0px 0px 0px 325px;
+	width: 650px;
 	height: 50px
 }
 
@@ -83,11 +73,12 @@ ul.navi li {
 	list-style: none;
 	margin: 0 auto;
 	height: 40px;
-	width: 250px;
+	width: 200px;
+    text-align: center;
 }
 
 ul.navi li a {
-	text-shadow: 1px 0px 0px skyblue;
+    text-shadow: 2px 0px 4px orange;
 }
 
 ul.li div, ul.navi div, header li div {
@@ -120,72 +111,19 @@ ul.member li {
 	border-radius: 25%;
 	list-style: none;
 	text-align: center;
-	width: 6em;
+	width: 8em;
 	height: 2.5em;
 }
 
+.aboutMe_aboutMe .AboutMe_content {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
 
-/* ==================================== section ====================================== */
-
-section {
-	background-color:#fff;
-	float: left;
-	width: 1024px;
-	height: 1080px;
-	
-}
-
-.bx-wrapper {
-	max-width: 100%;
-}
-
-.bx-viewport {
-	width: 100%; 
-	overflow: hidden; 
-	position: relative;
-	height: 100%;
-}
-
-.slider-box {
-	width: 615%;
-	position: relative;
-	transition-duration: 0.5s;
-	transform: translate3d();
-}
-
-.visual_visual4_box_clone {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-.visual_visual1 {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-.visual_visual2 {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-.visual_visual3 {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-.visual_visual4 {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-.visual_visual1_box_clone {
-	float: left; list-style: none; position: relative; width: 1024px;
-}
-
-
-/* ==================================== aside ====================================== */
-
-aside #members {
-	border-radius: 25%;
-	margin: 8px;
-	color: rgb(24,189,222);
-	text-decoration: none;
-	border-right: 1px #fff solid;	
 }
 
 /* =============================== footer ====================================== */
@@ -200,9 +138,15 @@ footer {
 footer h3 {
 	padding: 15px 5px 0px;
 	margin: 5px 5px;
+	color:  rgb(24,189,222);
+	font-family: 'Oleo Script', cursive;
+	font-size: 2.5rem;
+	text-shadow: 4px 2px 0px orange;
 }
 
 footer p {
 	text-align: center;
 	margin: 0 auto;
+    font-family: 'Oleo Script', cursive;
+	font-size: 1.2rem;
 }

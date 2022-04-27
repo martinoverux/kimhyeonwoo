@@ -91,3 +91,32 @@ function searchAddress() {
     }
        return true;
 }
+
+// function checkId() {
+//     $('#error-id').hideError();
+//     $('#success-id').hideError();
+//     let id = $('#id').val();
+
+//     $.ajax({
+//         "url": '/check-id',
+//         "type": "GET",
+//         "data": {
+//             id: id
+//         },
+//         success: function(response){
+//             $('#success-id').text(response.msg);
+//             $('#success-id').showError();
+//         },
+//         error: function(request, status, err) {
+//             let response = request.responseJSON
+//             if(request.status == 500){
+//                 alert(response.msg);
+//             }
+//             else{
+//                 $("#"+response.data.id).showError(response.data.content);
+//                 $("#"+response.data.focusId).focus();
+//             }
+//         }
+//     });
+// }
+

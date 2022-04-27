@@ -1,0 +1,76 @@
+#container {
+	background-color:#fff;
+	width: 1024px;
+	height: 2160px;
+	margin: 0 auto;
+}
+
+hr.line2{
+	border-top: 3px solid rgb(24,189,222);
+	border-radius: 15%;
+	margin: 0px 0px 5px;
+}	
+
+/* ==================================== section ====================================== */
+
+section {
+	background-color:#fff;
+	float: left;
+	width: 1024px;
+	height: 1080px;
+	
+}
+
+.bx-wrapper {
+	max-width: 100%;
+}
+
+.bx-viewport {
+	width: 100%; 
+	overflow: hidden; 
+	position: relative;
+	height: 100%;
+}
+
+.slider-box {
+	width: 615%;
+	position: relative;
+	transition-duration: 0.5s;
+	transform: translate3d();
+}
+
+.visual_visual4_box_clone {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+.visual_visual1 {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+.visual_visual2 {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+.visual_visual3 {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+.visual_visual4 {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+.visual_visual1_box_clone {
+	float: left; list-style: none; position: relative; width: 1024px;
+}
+
+
+/* ==================================== aside ====================================== */
+
+aside #members {
+	border-radius: 25%;
+	margin: 8px;
+	color: rgb(24,189,222);
+	text-decoration: none;
+	border-right: 1px #fff solid;	
+}
+
