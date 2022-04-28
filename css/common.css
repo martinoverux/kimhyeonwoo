@@ -97,7 +97,7 @@ ul.member {
 	flex-direction: row;
 	justify-content: right;
 	padding: 0px;
-	width: 300px;
+	width: 340px;
 }
  
 ul.member a {
@@ -111,7 +111,7 @@ ul.member li {
 	border-radius: 25%;
 	list-style: none;
 	text-align: center;
-	width: 8em;
+	width: 6em;
 	height: 2.5em;
 }
 
