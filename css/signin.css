@@ -13,25 +13,6 @@ hr.line2{
 
 /* ====================================== section ===================================== */
 
-.input-title-item{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    color: #666666;
-    margin-left: 8px;
-}
-.input-title-item span{
-    color: red;
-    font-size: 21px;
-    margin: 5px;
-    display: inline-block;
-    position: absolute;
-}
-.input-wrapper-margin{
-    margin-top: 8px;
-}
 .input-wrapper{
     flex: 1;
     margin: 0px 0px 10px;
@@ -48,51 +29,11 @@ hr.line2{
     padding: 0px 42px 0px 16px;
     margin: 0 auto;
 }
-.input-wrapper .input-certification{
-    padding: 0px 60px 0px 16px;
-}
-.input-wrapper .input-container-active{
-    border-color: #777777;
-}
-.input-wrapper .input-container input{
-    width: 100%;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-    color: #333;
-}
+
 .input-wrapper .input-container input::placeholder {
     color: #CACACA;
 }
-.input-wrapper .input-container .delete-btn{
-    display: none;
-    position: absolute;
-    top:50%;
-    right: 2px;
-    transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    padding: 10px;
-    z-index: 2;
-    cursor: pointer;
-}
-.input-wrapper .input-container .timer-item{
 
-    position: absolute;
-    top:50%;
-    right: 16px;
-    transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-    color: #333;
-}
 .error-item{
     display: none;
     margin: 4px 0px 0px 2px;
@@ -104,42 +45,16 @@ hr.line2{
     text-align: left;
     color: #FF1515;
 }
-.success-item{
-    display: none;
-    margin: 4px 0px 0px 2px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    text-align: left;
-    color: #219DDE;
-}
 
-#input-user-id {
+#input-user-id, #input-password  {
     border: 0px;
 }
 
-#input-password {
-    border: 0px;
-}
-
-#input-user-id:focus {
+#input-user-id:focus, #input-password:focus {
     outline: none;
 }
 
-#input-password:focus {
-    outline: none;
-}
-
-section p {
-    font-family: 'Jua', sans-serif;
-    font-size: 1.5rem;
-    color: rgb(24,189,222);
-    text-shadow: 2px 2px 2px orange;
-}
-
-section a {
+section p, section a {
     font-family: 'Jua', sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
@@ -154,7 +69,7 @@ button {
     color: white;
 }
 
-.checkbox-auto-login-container{
+/* .checkbox-auto-login-container{
     text-align: left;
 }
 .checkbox-auto-login-container input[type="checkbox"] {
@@ -181,7 +96,7 @@ button {
 .checkbox-auto-login-container input[type="checkbox"]:checked + label span {
     background:url('/images/') no-repeat;
     background-size: contain;
-}
+} */
 
 
 .signinTtitle h3 {
@@ -220,6 +135,7 @@ button {
 .id-input{
     margin-top: 50px;
 }
+
 .password-input{
     margin-top: 8px;
 }
@@ -232,18 +148,14 @@ button {
     margin: 0 auto;
 }
 
-.link-item{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-}
 .auto-login-item{
     margin-right: auto;
 }
+
 .find-password-item{
     margin-left: auto;
 }
+
 .link-divider-item{
     width: 1px;
     height: 10px;
@@ -261,8 +173,6 @@ button {
     line-height: 18px;
     letter-spacing: -0.25px;
 }
-
-
 
 /* ====================================== aside ======================================= */
 

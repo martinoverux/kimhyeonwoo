@@ -48,69 +48,54 @@ body form > p {
     padding: 0px;
 }
 
-#id  {
+#id, #phone  {
     width: 210px;
     height: 42px;
     font-size: 1rem;
     border: 0px;
 }
 
-#phone {
-    width: 280px;
+#email, #user_name  {
+    width: 270px;
     height: 42px;
     font-size: 1rem;
     border: 0px;
-}
-#email {
-    width: 280px;
-    height: 42px;
-    font-size: 1rem;
-    border: 0px;
+    margin: 0 10px;
 }
 
-#user_name {
-    width: 280px;
-    height: 42px;
-    font-size: 1rem;
-    border: 0px;
-}
-
-
-#password {
-    width: 350px;
+#password, #password_confirm {
+    width: 286px;
     height: 42px;
     font-size: 0.9rem;
     border: 0px;
+ 
 }
 
-#password_confirm {
-    width: 280px;
-    height: 42px;
-    font-size: 0.9rem;
+#address, #address_detail, #extraAddress {
+    border: 0;
+    width: 240px;
+    height: 43px;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+#postcode {
+    border: 0;
+    width: 110px;
+    height: 43px;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+#year , #month , #day {
+    width: 60px;
+    height: 38px;
+    font-size: 1.1rem;
     border: 0px;
+    padding: 0;
 }
 
-#id:focus {
-    outline: none;
-}
-
-#password:focus {
-    outline: none;
-}
-
-#password_confirm:focus {
-    outline: none;
-}
-
-#user_name:focus {
-    outline: none;
-}
-
-#phone:focus {
-    outline: none;
-
-}
-#email:focus {
+#id:focus , #password:focus, #password_confirm:focus , #user_name:focus, #phone:focus , #email:focus, #postcode:focus, #address:focus, #address_detail:focus, #extraAddress:focus, #year:focus, #month:focus, #day:focus  {
     outline: none;
 }
 
@@ -121,13 +106,7 @@ body form > p {
 .title_id{
     margin-top: 40px;
 }
-.title_pw{
-    margin-top: 24px;
-}
-.title-name{
-    margin-top: 24px;
-}
-.title_phone{
+.title_pw, .title-name, .title_phone{
     margin-top: 24px;
 }
 
@@ -145,9 +124,11 @@ body form > p {
     line-height: 16px;
     letter-spacing: -0.25px;
 }
+
 .btn_certification{
     width: 72px !important;
 }
+
 .row_area .input_wrapper{
     margin-left: 8px;
 }
@@ -192,11 +173,10 @@ body form > p {
     display: flex;
     align-items: center;
     height: 46px;
-    width: 212px;
+    width: 268px;
     background: #FFF;
     border: 1px solid #CACACA;
     border-radius: 4px;
-    padding: 0px 42px 0px 16px;
     margin-bottom: 10px;
 }
 
@@ -225,56 +205,6 @@ body form > p {
     margin: 0 auto;
 }
 
-#birth {
-    border: 0;
-    width: 300px;
-    height: 43px;
-    font-size: 1rem;
-}
-
-#postcode {
-    border: 0;
-    width: 110px;
-    height: 43px;
-    font-size: 1rem;
-}
-
-#address {
-    border: 0;
-    width: 300px;
-    height: 43px;
-    font-size: 1rem;
-}
-#address_detail{
-    border: 0;
-    width: 300px;
-    height: 43px;
-    font-size: 1rem;
-}
-
-#extraAddress {
-    border: 0;
-    width: 300px;
-    height: 43px;
-    font-size: 1rem;
-}
-
-#postcode:focus {
-    outline: none;
-}
-
-#address:focus {
-    outline: none;
-}
-#address_detail:focus {
-    outline: none;
-}
-
-#extraAddress:focus {
-    outline: none;
-}
-
-
 .input_wrapper .input_container {
     position: relative;
     display: flex;
@@ -291,7 +221,7 @@ body form > p {
 }
 
 .input_wrapper {
-    border-color: #777777;
+    border-color: #777;
 }
 
 .input_wrapper .input_container input{
@@ -301,13 +231,12 @@ body form > p {
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.25px;
-    color: #333333;
+    color: #333;
 }
 
 .input_wrapper .input_container input::placeholder {
     color: #CACACA;
 }
-
 
 .input_wrapper .input_container .timer_item {
     position: absolute;
@@ -321,32 +250,8 @@ body form > p {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: -0.25px;
-    color: #333333;
+    color: #333;
 }
-.error_item{
-    display: none;
-    margin: 4px 0px 0px 2px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    text-align: left;
-    color: #FF1515;
-}
-
-.success_item{
-    display: none;
-    margin: 4px 0px 0px 2px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    text-align: left;
-    color: #219DDE;
-}
-
 
 .btn_blue{
     display: flex;
@@ -357,14 +262,14 @@ body form > p {
     box-sizing: border-box;
     border-radius: 4px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .btn_white{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: #FFF;
     border: 1px solid #219DDE;
     box-sizing: border-box;
     border-radius: 4px;
@@ -403,39 +308,6 @@ body form > p {
 .input_container_birth {
     width: 62px;
     padding: 0;
-}
-
-#year {
-    width: 60px;
-    height: 38px;
-    font-size: 1.1rem;
-    border: 0px;
-    padding: 0;
-}
-#month {
-    width: 60px;
-    height: 38px;
-    font-size: 1.1rem;
-    border: 0px;
-    padding: 0;
-}
-#day {
-    width: 60px;
-    height: 38px;
-    font-size: 1.1rem;
-    border: 0px;
-    padding: 0;
-}
-
-#year:focus {
-    outline: none;
-}
-#month:focus {
-    outline: none;
-}
-
-#day:focus {
-    outline: none;
 }
 
 .signupInfoOptionTitle {

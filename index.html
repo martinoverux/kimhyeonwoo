@@ -9,7 +9,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle:wght@300;400;700&family=Gamja+Flower&family=Jua&family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Pen+Script&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">	
 	<link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+	
     <title>index</title>
 </head>
     <body>
@@ -19,7 +20,6 @@
 					<a href="index.html">
 						<h1>Sitz im Leben</h1>
 						<hr class="line2">
-
 					</a>
 				</div>
 				<aside id = "members">
@@ -52,48 +52,87 @@
 			</header>
 			<section id="content">  
 				<hr class="line2">
+				<!-- <div class="slide_wrap">
+					<div class="slide_box">
+					  <div class="slide_list clearfix">
+						<div class="slide_content slide01">
+						  <p>1</p>
+						</div>
+						<div class="slide_content slide02">
+						  <p>2</p>
+						</div>
+						<div class="slide_content slide03">
+						  <p>3</p>
+						</div>
+						<div class="slide_content slide04">
+						  <p>4</p>
+						</div>
+						<div class="slide_content slide05">
+						  <p>5</p>
+						</div>
+					  </div>
+					  <!-- // .slide_list -->
+					</div>
+					<!-- // .slide_box -->
+					<div class="slide_btn_box">
+					  <button type="button" class="slide_btn_prev">Prev</button>
+					  <button type="button" class="slide_btn_next">Next</button>
+					</div>
+					<!-- // .slide_btn_box -->
+					<ul class="slide_pagination"></ul>
+					<!-- // .slide_pagination -->
+				  </div>
+				  <!-- // .slide_wrap -->
+				</div>
+				// .container -->
+
+
 				<div class="main-visual-wrap" id="main-visual">
 				  <div class="main-visual">
 					<div class="bx-wrapper">
 						<div class="bx-viewport">
 							<div class="slider-box">
-								<div class="visual_visual4_box_clone"></div>
-								<div class="visual_visual1">
-									<!-- <img src="./images/park_sleepingdragon5.jpg" alt="와룡공원1"> -->
+								<div class="visual-clone"></div>
+								<div class="visual">
+									<img src="./images/park_sleepingdragon5.jpg" alt="와룡공원1">
 								</div>
-								<div class="visual_visual2">
-									<img src="./images/park_sleepingdragon2.jpg">
+								<div class="visual"><img src="./images/park_sleepingdragon2.jpg"></div>
+								<div class="visual"><img src="./images/flower1.jpg" alt="꽃1">
 								</div>
-								<div class="visual_visual3">
-									<!-- <img src="./images/flower1.jpg" alt="꽃1"> -->
+								<div class="visual"><img src="./images/flower3.jpg" alt="꽃2">
 								</div>
-								<div class="visual_visual4">
-									<!-- <img src="./images/flower3.jpg" alt="꽃2"> -->
-								</div>
-								<div class="visual_visual1_box_clone"></div>	
+								<div class="visual-clone"></div>	
 							</div>
 						</div>
 						<div class="bx-controls">
 							<div class="bx-pager_bx-default-pager">
 								<div class="bx-pager-item">
-									<a href data-slide-index="0" class="bx-pager-link-active">1</a>
+									<a href data-slide-index="0" class="bx-pager-link"><img src="./images/circle.png" alt="원 이미지"></a>
 								</div>
 								<div class="bx-pager-item">
-									<a href data-slide-index="1" class="bx-pager-link">2</a>
+									<a href data-slide-index="1" class="bx-pager-link"><img src="./images/circle.png" alt="원 이미지"></a>
 								</div>
 								<div class="bx-pager-item">
-									<a href data-slide-index="2" class="bx-pager-link">3</a>
+									<a href data-slide-index="2" class="bx-pager-link"><img src="./images/circle.png" alt="원 이미지"></a>
 								</div>
 								<div class="bx-pager-item">
-									<a href data-slide-index="3" class="bx-pager-link">4</a>
+									<a href data-slide-index="3" class="bx-pager-link"><img src="./images/circle.png" alt="원 이미지"></a>
 								</div>
 							</div>
 							<div class="bx-control-auto">
-								<div class="bx-control-auto-item">
+								<div class="bx-control auto-item">
 									<a class="bx-start-active" href></a>
 								</div>
-								<div class="bx-control-auto-item">
+								<div class="bx-control auto-item">
 									<a class="bx-end" href></a>
+								</div>
+							</div>
+							<div class="bx-control-prev_next">
+								<div class="bx-control prev-item">
+									<a class="bx-prev" href><img src="./images/rewind.png" alt="왼쪽 선택 이미지"></a>
+								</div>
+								<div class="bx-control next-item">
+									<a class="bx-next" href><img src="./images/play.png" alt="오른쪽 선택 이미지"></a>
 								</div>
 							</div>
 						</div>
@@ -110,5 +149,105 @@
 				<p>&lt;Copyright 2022. <em>KimHyeonwoo</em>. All rights reserved.&gt;</p>
 			</footer>
 		</div>
+		<!-- <script>
+			(function () {
+				const slideList = document.querySelector('.slide_list');  // Slide parent dom
+				const slideContents = document.querySelectorAll('.slide_content');  // each slide dom
+				const slideBtnNext = document.querySelector('.slide_btn_next'); // next button
+				const slideBtnPrev = document.querySelector('.slide_btn_prev'); // prev button
+				const pagination = document.querySelector('.slide_pagination');
+				const slideLen = slideContents.length;  // slide length
+				const slideWidth = 400; // slide width
+				const slideSpeed = 300; // slide speed
+				const startNum = 0; // initial slide index (0 ~ 4)
+				
+				slideList.style.width = slideWidth * (slideLen + 2) + "px";
+				
+				// Copy first and last slide
+				let firstChild = slideList.firstElementChild;
+				let lastChild = slideList.lastElementChild;
+				let clonedFirst = firstChild.cloneNode(true);
+				let clonedLast = lastChild.cloneNode(true);
+			
+				// Add copied Slides
+				slideList.appendChild(clonedFirst);
+				slideList.insertBefore(clonedLast, slideList.firstElementChild);
+			
+				// Add pagination dynamically
+				let pageChild = '';
+				for (let i = 0; i < slideLen; i++) {
+				  pageChild += '<li class="dot';
+				  pageChild += (i === startNum) ? ' dot_active' : '';
+				  pageChild += '" data-index="' + i + '"><a href="#"></a></li>';
+				}
+				pagination.innerHTML = pageChild;
+				const pageDots = document.querySelectorAll('.dot'); // each dot from pagination
+			
+				slideList.style.transform = "translate3d(-" + (slideWidth * (startNum + 1)) + "px, 0px, 0px)";
+			
+				let curIndex = startNum; // current slide index (except copied slide)
+				let curSlide = slideContents[curIndex]; // current slide dom
+				curSlide.classList.add('slide_active');
+			
+				/** Next Button Event */
+				slideBtnNext.addEventListener('click', function() {
+				  if (curIndex <= slideLen - 1) {
+					slideList.style.transition = slideSpeed + "ms";
+					slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 2)) + "px, 0px, 0px)";
+				  }
+				  if (curIndex === slideLen - 1) {
+					setTimeout(function() {
+					  slideList.style.transition = "0ms";
+					  slideList.style.transform = "translate3d(-" + slideWidth + "px, 0px, 0px)";
+					}, slideSpeed);
+					curIndex = -1;
+				  }
+				  curSlide.classList.remove('slide_active');
+				  pageDots[(curIndex === -1) ? slideLen - 1 : curIndex].classList.remove('dot_active');
+				  curSlide = slideContents[++curIndex];
+				  curSlide.classList.add('slide_active');
+				  pageDots[curIndex].classList.add('dot_active');
+				});
+			
+				/** Prev Button Event */
+				slideBtnPrev.addEventListener('click', function() {
+				  if (curIndex >= 0) {
+					slideList.style.transition = slideSpeed + "ms";
+					slideList.style.transform = "translate3d(-" + (slideWidth * curIndex) + "px, 0px, 0px)";
+				  }
+				  if (curIndex === 0) {
+					setTimeout(function() {
+					  slideList.style.transition = "0ms";
+					  slideList.style.transform = "translate3d(-" + (slideWidth * slideLen) + "px, 0px, 0px)";
+					}, slideSpeed);
+					curIndex = slideLen;
+				  }
+				  curSlide.classList.remove('slide_active');
+				  pageDots[(curIndex === slideLen) ? 0 : curIndex].classList.remove('dot_active');
+				  curSlide = slideContents[--curIndex];
+				  curSlide.classList.add('slide_active');
+				  pageDots[curIndex].classList.add('dot_active');
+				});
+			
+				/** Pagination Button Event */
+				let curDot;
+				Array.prototype.forEach.call(pageDots, function (dot, i) {
+				  dot.addEventListener('click', function (e) {
+					e.preventDefault();
+					curDot = document.querySelector('.dot_active');
+					curDot.classList.remove('dot_active');
+					
+					curDot = this;
+					this.classList.add('dot_active');
+			
+					curSlide.classList.remove('slide_active');
+					curIndex = Number(this.getAttribute('data-index'));
+					curSlide = slideContents[curIndex];
+					curSlide.classList.add('slide_active');
+					slideList.style.transition = slideSpeed + "ms";
+					slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 1)) + "px, 0px, 0px)";
+				  });
+				});
+			  })();</script> -->
     </body>
 </html>

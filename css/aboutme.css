@@ -13,9 +13,25 @@ hr.line2{
 
 /* ======================================================== section ========================================================== */
 
+.aboutMe_aboutMe .AboutMe_content {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+}
+
 #content {
     width: 1024px;
     height: 2600px;
+}
+
+#archiving_table{
+    width: 1024px;
+    height: 200px;
+    margin: 30px auto;
 }
 
 .sectionTitle_sectionTitle {
@@ -79,43 +95,7 @@ hr.line2{
    text-align: center;
 }
 
-.aboutMe_icon_image_wrapper {
-    margin: 40px 125px 20px 125px;
-}
-
-.laptop_image{
-    width: 1024px;
-    height: 500px;
-}
-
-.aboutMe_basic_infos img {
-    width: 50px;
-    height: 50px; 
-}
-
-.aboutMe_skills_infos_frontend {
-    
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    width: 330px;
-    align-items: center;
-    margin: 0px 0px 0px 150px;
-}
-
-.aboutMe_skills_infos_backend {
-    
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    -webkit-box-pack: justify;
-    width: 330px;
-    margin: 0px 0px 0px 150px;
-}
-
-.aboutMe_skills_infos_database {
+.aboutMe_skills_infos_frontend, .aboutMe_skills_infos_backend, .aboutMe_skills_infos_database {
     
     display: flex;
     flex-flow: nowrap;
@@ -138,14 +118,43 @@ hr.line2{
     flex-flow: row wrap;
 }
 
-#aboutMe_html_icon_img {
-    width: 100px;
-    height: 100px; 
+.aboutMe_skills_field_label {
+    font-family: Black Han Sans,sans-serif;
+    font-size: 2.5rem;
 }
 
-#aboutMe_css_icon_img {
+#certificates_table th, #archiving_table th  {
+    font-family: Black Han Sans,sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    padding: 0px 20px;
+}
+
+#certificates_table td , #archiving_table td {
+    font-family: 'Jua', sans-serif;
+    font-size: 1.3rem;
+    padding: 0px 18px;
+}
+
+/* =========================================== 이미지 파일 ===================================== */
+
+.aboutMe_icon_image_wrapper {
+    margin: 40px 125px 20px 125px;
+}
+
+.laptop_image{
+    width: 1024px;
+    height: 500px;
+}
+
+.aboutMe_basic_infos img {
+    width: 50px;
+    height: 50px; 
+}
+
+#aboutMe_html_icon_img , #aboutMe_css_icon_img, .aboutMe_skills_infos_backend img , .aboutMe_skills_infos_database img, #qnet_icon , #history_icon , #github_icon {
     width: 100px;
-    height: 100px; 
+    height: 100px;
 }
 
 #aboutMe_javascript_icon_img {
@@ -153,73 +162,10 @@ hr.line2{
     height: 106px; 
 }
 
-.aboutMe_skills_infos_backend img {
-    width: 100px;
-    height: 100px; 
-}
-.aboutMe_skills_infos_database img {
-    width: 100px;
-    height: 100px; 
-}
-.aboutMe_skills_field_label {
-    font-family: Black Han Sans,sans-serif;
-    font-size: 2.5rem;
-}
-
-#certificates_table th {
-    font-family: Black Han Sans,sans-serif;
-    font-size: 2rem;
-    text-align: left;
-    padding: 0px 20px;
-}
-
-#certificates_table td {
-    font-family: 'Jua', sans-serif;
-    font-size: 1.3rem;
-    padding: 0px 18px;
-}
-
-#archiving_table th {
-    font-family: Black Han Sans,sans-serif;
-    font-size: 2rem;
-    text-align: left;
-    padding: 0px 20px;
-}
-
-#archiving_table td {
-    font-family: 'Jua', sans-serif;
-    font-size: 1.3rem;
-    padding: 0px 18px;
-}
-
-#archiving_table{
-    width: 1024px;
-    height: 200px;
-    margin: 30px auto;
-}
-
-
-#qnet_icon {
-    width: 100px;
-    height: 100px;
-}
-
 #gtelp_icon {
     width: 120px;
     height: 36px;
 }
-
-#history_icon {
-    width: 100px;
-    height: 100px;
-}
-
-#github_icon {
-    width: 100px;
-    height: 100px;
-}
-
-
 
 /* ==================================== aside ====================================== */
 
