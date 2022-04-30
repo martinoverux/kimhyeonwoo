@@ -15,8 +15,98 @@ hr.line2{
 
 section {
 	background-color:#fff;
-	float: left;
 	width: 1024px;
 	height: 1080px;
-	
+}
+
+.column-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	width: 1024px;
+	flex-wrap: wrap;
+	height: 400px;
+}
+
+.sb-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto
+}
+
+.sb-title h4 {
+	color: orange;
+	font-size: 2rem;
+	font-family: 'Jua', sans-serif;
+	text-shadow: 2px 2px 2px orangered;
+	text-align: center;
+	margin: 0;
+	padding-left: 10px;
+}
+
+.attraction {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	flex-wrap: wrap;
+	width: 510px;
+	height: 400px;
+}
+
+
+.gourmandise {
+	display: felx;
+	flex-direction: row;
+	justify-content: right;
+	flex-wrap: wrap;
+	width: 510px;
+	height: 400px;
+}
+
+
+.column-list {
+	width: 500px;
+	height: 390px;
+}
+
+.column-list ul {
+	display: felx;
+	flex-direction: row;
+}
+.column-list li {
+	list-style: none;
+	width: 185px;
+	height: 130px;
+}
+
+
+.sb-title > img {
+	width: 50px;
+	height: 50px;
+}
+
+.thumb-area {
+	width: 185px;
+	height: 130px;
+}
+
+.img-cultural-tour {
+	width: 180px;
+	height: 125px;
+}
+
+.title-cultural-tour {
+	font-family: 'Nanum Pen Script', cursive;
+    font-size: 1.5rem;
+    border-radius: 7%;
+    margin: 5px;
+    color: rgb(24,189,222);
+    text-decoration: none;
+    border-right: 1px #fff solid;
+    width: 8em;
+    height: 2.5em;
 }
