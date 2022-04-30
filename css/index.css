@@ -76,25 +76,28 @@ section {
 	 height: 720px;
 }
 
-.pagerContainer {
+.imagePager {
 	position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
 }
 
-.pagerContainer li {
+.imagePager li {
 	display: inline-block;
 	text-indent: -9999rem;
 	border-radius: 50%;
-	width: 1rem;
-	height: 1rem;
-	background-color: var(--color-black);
-	text-align: center;
+	background-color: var(--color-gray);
+	/* text-align: center; */
 }
 
-.pagerContainer li:active {
-	background-color: var(--color-white);
+.imagePage li img {
+	width: 30px;
+	height: 30px;
+}
+
+.imagePager li.active {
+	background-color: var(--color-black);
 	transition: .3s  linear;
 }
 
@@ -109,7 +112,7 @@ section {
 	border: none;
  }
 
-.bx-prev.dsiabled, .bx-next.disabled { 
+.bx-prev.disabled, .bx-next.disabled { 
 	display: none;
 }
 
@@ -118,6 +121,10 @@ section {
 }
 .bx-next { 
 	right: 0; 
+}
+
+.bx-prev:hover, .bx-next:hover { 
+	
 }
 
 /* ==================================== aside ====================================== */

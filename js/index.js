@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function(){
 const sliderWrapper = document.querySelector('.bx-viewport'), // 슬라이드 전체 컨테이너
       sliderContainer = document.querySelector('.slider-box'), // 슬라이드 아이템 컨테이너
       btnPrev = document.querySelector('.bx-prev'), // 이전 버튼
-      btnNext = document.querySelector('.bx-next'); // 다음 버튼
-      pagerContainer = document.querySelector('.pagerContainer')
+      btnNext = document.querySelector('.bx-next'), // 다음 버튼
+      pagerContainer = document.querySelector('.imagePager');
+
 let slides = document.querySelectorAll('.visual'), // 슬라이드 아이템
     slideCount = slides.length, // 슬라이드 갯수
     currentIndex = 0, // 현재 슬라이드
@@ -15,17 +16,18 @@ let slides = document.querySelectorAll('.visual'), // 슬라이드 아이템
 // 슬라이드 아이템 자동으로 가로 정렬 및 갯수만큼 페이지네이션 버튼 자동 생성
 for(let i = 0; i < slideCount; i++) {
   slides[i].style.left = `${i * 100}%`;
-//   pagerHTML += `<li data-slide-index="${i}">${i + 1}</li>`;
-  pagerHTML += `<li data-slide-index="${i}"><img src="./images/circle.png"></li>`;
+  // pagerHTML += `<li data-index="${i}">${i + 1}</li>`;
+  pagerHTML += `<li data-index="${i}"><img src="./images/circle.png"></li>`;
   pagerContainer.innerHTML = pagerHTML;
 }
-const pagerBtns = document.querySelectorAll('.pagerContainer li');
+  let pagerBtns = document.querySelectorAll('.imagePager li');
 
 // 슬라이드 이동 함수
 function goToSlide(idx) {
   sliderContainer.classList.add('animated');
   sliderContainer.style.left = `${idx * -100}%`;
   currentIndex = idx;
+
   pagerBtns.forEach(pagerBtn => {
     pagerBtn.classList.remove('active');
   });
@@ -79,7 +81,7 @@ sliderWrapper.addEventListener('mouseleave', () => {
   startAutoSlide();
 });
 
-// 페이지네이션 클릭시 슬라이드 이동 함수 호출
+// 페이지네이션 클릭 시 슬라이드 이동 함수 호출
 pagerBtns.forEach(pagerBtn => {
   pagerBtn.addEventListener('click', (event) => {
       console.log(event.target);
