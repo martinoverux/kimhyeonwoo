@@ -1,7 +1,7 @@
 #container {
 	background-color:#fff;
 	width: 1024px;
-	height: 1200px;
+	height: 100px;
 	margin: 0 auto;
 }
 
@@ -11,8 +11,8 @@ hr.line2{
 	margin: 0px 0px 5px;
 }	
 
-html, body { box-sizing: border-box; padding: 0; margin: 0; text-align: center; }
-*, *:before, *:after { box-sizing: inherit; }
+/* html, body { box-sizing: border-box; padding: 0; margin: 0; text-align: center; }
+*, *:before, *:after { box-sizing: inherit; } */
 
 /* ==================================== section ====================================== */
 
@@ -20,7 +20,7 @@ section {
 	background-color:#fff;
 	float: left;
 	width: 1024px;
-	height: 710px;
+	height: 800px;
 	overflow: hidden;
 	
 }
@@ -30,9 +30,18 @@ section {
 	height: 720px;
 }
 
+.bx-controls {
+	width: 1024px;
+	height: 50px;
+}
+
 .bx-controls img {
-	width: 1.5rem;
-	height: 1.5rem;
+	height: 50px;
+	width: 50px;
+}
+.bx-control-prev_next img {
+	height: 50px;
+	width: 50px;
 }
 
 .bx-wrapper {
@@ -55,6 +64,11 @@ section {
 	transform: translate3d();
 }
 
+.slider-box.animated {
+	-webkit-transition: left .5s ease-in;
+	transition: left .5s ease-in;
+}
+
 .visual img{
 	display: table;
 	 float: left; 
@@ -69,29 +83,41 @@ section {
 	bottom: 0;
 }
 
-.bx-pager-item {
+.pagerContainer li {
 	display: inline-block;
 	text-indent: -9999rem;
 	border-radius: 50%;
-	background-color: var(--color-gray);
+	width: 1rem;
+	height: 1rem;
+	background-color: var(--color-black);
+	text-align: center;
 }
 
+.pagerContainer li:active {
+	background-color: var(--color-white);
+	transition: .3s  linear;
+}
 
-.slide_btn_box > button { 
+.bx-prev, .bx-next { 
 	position: absolute; 
 	top: 50%; 
-	margin-top: -45px; 
-	width: 60px; height: 60px; 
-	font-size: 16px; color: #999;
-	background: none; 
-	border: 1px solid #ddd; 
-	cursor: pointer;
+	transform: translateY(-50%);
+	display: inline-block;
+	width: 4rem;
+	height: 100%;
+	background-color: #fff;
+	border: none;
  }
+
+.bx-prev.dsiabled, .bx-next.disabled { 
+	display: none;
+}
+
 .bx-prev { 
-	left: -100px; 
+	left: 0; 
 }
 .bx-next { 
-	right: -100px; 
+	right: 0; 
 }
 
 /* ==================================== aside ====================================== */
