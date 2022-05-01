@@ -1,7 +1,7 @@
 #container {
 	background-color:#fff;
 	width: 1024px;
-	height: 1400px;
+	height: 1000px;
 	margin: 0 auto;
 }
 
@@ -19,23 +19,13 @@ section {
 	height: 1250px;
 }
 
-.column-wrap {
+.title-article {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	width: 1024px;
 	flex-wrap: wrap;
-	height: 450px;
-	margin-top: 30px;
-}
-
-.column-wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 1024px;
-	flex-wrap: wrap;
-	height: 600px;
+	height: 80px;
 	margin-top: 30px;
 }
 
@@ -45,29 +35,20 @@ section {
 	justify-content: space-between;
 	width: 1024px;
 	flex-wrap: wrap;
-	height: 600px;
+	height: 500px;
 	margin-top: 30px;
 }
 
 
-.sb-title {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: 400px;
-	height: 50px;
-	margin: 0 auto
-}
-
-.sb-title h4 {
+.title-article h4 {
 	color: orange;
 	font-size: 2rem;
 	font-family: 'Jua', sans-serif;
 	text-shadow: 2px 2px 2px orangered;
 	text-align: center;
 	margin: 0;
-	padding-left: 10px;
+	width: 280px;
+	height: 50px
 }
 
 .attraction {
@@ -75,21 +56,21 @@ section {
 	flex-direction: row;
 	justify-content: left;
 	flex-wrap: wrap;
-	width: 510px;
-	height: 450px;
+	width: 400px;
+	height: 80px;
 }
 
 
 .gourmandise {
-	display: felx;
+	display: flex;
 	flex-direction: row;
 	justify-content: right;
 	flex-wrap: wrap;
-	width: 510px;
-	height: 450px;
+	width: 400px;
+	height: 80px;
 }
 
-ul.columns {
+ul.column-list {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -102,7 +83,7 @@ ul.columns {
 	padding-left: 10px;
 }
 
-.column {
+.is_on {
 	width: 185px;
 	height: 130px;
 	text-decoration: none;
@@ -147,7 +128,7 @@ ul.columns {
 	font-size: 1.8rem;
 }
 
-.sb-title > img {
+.title-article img {
 	width: 50px;
 	height: 50px;
 }
@@ -161,6 +142,7 @@ ul.columns {
 .img-cultural-tour {
 	width: 180px;
 	height: 125px;
+	border-radius: 25%;
 }
 
 .title-cultural-tour {
@@ -183,8 +165,16 @@ ul.columns {
 }
 
 /* ============================== 탭 메뉴 ======================================== */
-.column-list {
+.list {
 	list-style:none;
+	width: 900px;
+	height: 380px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-between;
+	margin: 0 auto;
 }
 .btn-tab {
 	text-decoration:none; 
@@ -194,24 +184,25 @@ ul.columns {
 	padding:15px; 
 	letter-spacing:-0.5px;
 }
-.tab_menu, .column-contents {
-	position:relative;
+.tab_menu {
+	position: relative;
+	height: 1000px;
 }
-.tab_menu .column-list {
+.tab_menu .list {
 	overflow:hidden;
 }
-.tab_menu .column-list li {
+.tab_menu .list li {
 	float:left; 
 	margin-right:14px;
 }
-.tab_menu .column-list li.is_on .btn-tab{
+.tab_menu .list li.is_on .btn-tab{
 	font-weight:bold; 
 	color:green;
 }
-.tab_menu .column-list .btn-tab{
+.tab_menu .list .btn-tab{
 	font-size:13px;
 }
-.column-contents .cont_area .cont{
+.tab_menu .cont_area .cont{
 	display:none; 
 	position:absolute; 
 	top:25px; left:0; 
@@ -223,6 +214,7 @@ ul.columns {
 	line-height:100px;}
 
 /* =========================== 모달 창 ============================================*/
+/* -- 간송 이미지-- */
 #gansongbohwagak {
 	background-image: url(../images/gansong.jpg);
 	background-size: 100% 100%;
@@ -242,6 +234,72 @@ ul.columns {
 	background-image: url(../images/Goryeo_Celadon.jpg);
 	background-size: 100% 100%;
 }
+
+
+/* -- 와룡공원 -- */
+
+#waryong1 {
+	background-image: url(../images/park_sleepingdragon4.jpg);
+	background-size: 100% 100%;
+}
+#waryong2 {
+	background-image: url(../images/waryong_summer.jpg);
+	background-size: 100% 100%;
+}
+
+#waryong3 {
+	background-image: url(../images/waryong_fall.jpg);
+	background-size: 100% 100%;
+}
+
+#waryong4 {
+	background-image: url(../images/waryong_winter.jpg);
+	background-size: 100% 100%;
+}
+
+
+/* -- 심우장 -- */
+
+#simwoojang1 {
+	background-image: url(../images/simwoojang1.jpg);
+	background-size: 100% 100%;
+}
+#simwoojang2 {
+	background-image: url(../images/simwoojang1.jpg);
+	background-size: 100% 100%;
+}
+
+#simwoojang3 {
+	background-image: url(../images/simwoojang1.jpg);
+	background-size: 100% 100%;
+}
+
+#simwoojang4 {
+	background-image: url(../images/simwoojang1.jpg);
+	background-size: 100% 100%;
+}
+
+/* -- 길상사 -- */
+
+#gilsangsa1 {
+	background-image: url(../images/gilsangsa1.jpg);
+	background-size: 100% 100%;
+}
+#gilsangsa2 {
+	background-image: url(../images/gilsansa-bosal.jpg);
+	background-size: 100% 100%;
+}
+
+#gilsangsa3 {
+	background-image: url(../images/gilsangsa2.jpg);
+	background-size: 100% 100%;
+}
+
+#gilsangsa4 {
+	background-image: url(../images/gilsangsa3.jpg);
+	background-size: 100% 100%;
+}
+
 
 
 .modal-custom-button {

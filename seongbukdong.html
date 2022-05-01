@@ -50,17 +50,22 @@
 					</ul>
 				</nav>
 			</header>
-			<section id="content1">  
+			<section id="content">  
 				<hr class="line2">
-				<article class="column-wrap">
-					<div class="attraction">
-						<div class="sb-title">
-							<img src="./images/seoul-tower (1).png" alt="서울 타워 사진">
+				<article class="title-article">
+						<div class="attraction">
+							<img src="./images/seoul-tower.png" alt="서울 타워 사진">
 							<h4>Attraction - 명소</h4>
+						</div> 
+						<div class="gourmandise">
+							<img src="./images/bibimbap.png" alt="비빔밥 사진">
+							<h4>Gourmandise - 맛집</h4>
 						</div>
+				</article>
+				<article class="tab-article">
 						<div class="tab_menu">
-							<ul class="column-list"> <!-- list --> 
-								<li class="is_on"> <!-- is_on --> 
+							<ul class="list"> 
+								<li class="is_on"> 
 									<div class="thumb-area">
 										<a href="#tab1" class="btn-tab"><img class="img-cultural-tour" src="./images/gansong.jpg" alt="간송미술관 보화각 사진"></a>
 									</div>
@@ -76,6 +81,23 @@
 										<p class="title-cultural-tour">와룡공원</p>
 									</div>
 								</li>
+								<li class="is_on"> 
+									<div class="thumb-area">
+										<a href="#tab5" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
+									</div>
+									<div class="text-area">
+										<p class="title-cultural-tour">나폴레옹 제과점</p>
+									</div>
+								</li>
+								<li class="is_on">
+									<div class="thumb-area">
+										<a href="#tab6" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
+										
+									</div>
+									<div class="text-area">
+										<p class="title-cultural-tour">성북동 빵공장</p>
+									</div>
+								</li>
 								<li class="is_on">
 									<div class="thumb-area">
 										<a href="#tab3" class="btn-tab"><img class="img-cultural-tour" src="./images/simwoojang1.jpg" alt="심우장 사진"></a>	
@@ -87,40 +109,12 @@
 								<li class="is_on">
 									<div class="thumb-area">
 										<a href="#tab4" class="btn-tab" ><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt="길상사 사진"></a>	
-										
 									</div>
 									<div class="text-area">
 										<p class="title-cultural-tour">길상사</p>
 									</div>
 								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="gourmandise">
-						<div class="sb-title">
-							<img src="./images/bibimbap.png" alt="비빔밥 사진">
-							<h4>Gourmandise - 맛집</h4>
-						</div>
-						<div class="tab_menu">
-							<ul class="column-list"> <!-- list --> 
-								<li class="is_on"> <!-- is_on --> 
-									<div class="thumb-area">
-										<a href="#tab5" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
-									</div>
-									<div class="text-area">
-										<p class="title-cultural-tour">나폴레옹 제과점</p>
-									</div>
-								</li>
-								<li class="column">
-									<div class="thumb-area">
-										<a href="#tab6" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
-										
-									</div>
-									<div class="text-area">
-										<p class="title-cultural-tour">성북동 빵공장</p>
-									</div>
-								</li>
-								<li class="column">
+								<li class="is_on">
 									<div class="thumb-area">
 										<a href="#tab7" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
 									</div>
@@ -128,7 +122,7 @@
 										<p class="title-cultural-tour">성북동 누룽지 백숙</p>
 									</div>
 								</li>
-								<li class="column">
+								<li class="is_on">
 									<div class="thumb-area">
 										<a href="#tab8" class="btn-tab"><img class="img-cultural-tour" src="./images/gilsangsa1.jpg" alt=""></a>
 									</div>
@@ -137,340 +131,337 @@
 									</div>
 								</li>
 							</ul>
-						</div>
-					</div>	
-				</article>
-				<article class="column-contents">
-					<br>
-					<br>
-					<hr class="line2">
-					<div class="cont_area">
-						<div id="tab1" class="cont">
-							<div class="content-title">
-								<p>명소 - 간송 미술관</p>
+							<br>
+							<br>
+							<hr class="line2">	
+						    <div class="cont_area">
+							<div id="tab1" class="cont">
+								<div class="content-title">
+									<p>명소 - 간송 미술관</p>
+								</div>
+								<div class="content-wrapper">
+									<div class="content-img-wrapper">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal1" id="gansongbohwagak"></button>
+											<h3>간송미술관 보화각</h3>
+										</div>
+										<div id="myModal1" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>간송미술관 보화각</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/gansong.jpg" alt="간송미술관 보화각">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal2" id="hunminjeongum"></button>
+											<h3>훈민정음 해례본</h3>
+										</div>
+										<div id="myModal2" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>훈민정음 해례본</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/Hunminjeongum.jpg" alt="훈민정음 해례본">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal3" id="miindo"></button>
+											<h3>신윤복의 미인도</h3>
+										</div>
+										<div id="myModal3" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>신윤복의 미인도</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/Hyewon-Miindo.jpg" alt="간송미술관 보화각">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal4" id="goryeo"></button>
+											<h3>청자운학상감문배병</h3>
+										</div>
+										<div id="myModal4" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>청자운학상감문배병 - 국보 제68호</h2>
+												</div>
+												<div class="modal-body">
+														<img class="modal-content-img" src="./images/Goryeo_Celadon.jpg" alt="간송미술관 보화각">
+												</div>
+											</div>
+										</div>	
+									</div> 
+									<div class="content-text">
+										<p class="text-line">간송 전형필 선생님께서 설립한 대한민국 최초의 사립미술관으로,</p>
+										<p class="text-line">현재 호림 박물관, 리움 미술관과 더불어 국내 3대 사립 미술관입니다. </p>
+										<p class="text-line">교과서에서 보았던 많은 서화들의 소재지가 이곳이라고 보아도 무방하며,</p>
+										<p class="text-line">10점이상의 국보와 수많은 작품들을 소장하고 있습니다.</p>
+										<p class="text-line">제일 유명한 것은 훈민정음 해례본과 신윤복의 미인도를 말할 수 있겠습니다.</p>
+										<p class="text-line">상설로 전시를 하지 않아서, 전시를 하는 날에는 몇 시간씩 줄을 서는 경우도</p>
+										<p class="text-line">허다한데, 지금은 미리 예약을 하여야 입장이 가능합니다.</p>
+										<hr class="line2">
+										<p class="text-line">주소: 서울시 성북구 성북로 102-11</p>
+										<p class="text-line">링크 : <a href="https://kansong.org/">https://kansong.org/</a></p>
+									</div>
+								</div>
 							</div>
-							<div class="content-wrapper">
-								<div class="content-img-wrapper">
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal1" id="gansongbohwagak"></button>
-										<h3>간송미술관 보화각</h3>
-									</div>
-									<div id="myModal1" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>간송미술관 보화각</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/gansong.jpg" alt="간송미술관 보화각">
+							<div id="tab2" class="cont">
+								<div class="content-title">
+									<p>명소 - 와룡공원</p>
+								</div>
+								<div class="content-wrapper">
+									<div class="content-img-wrapper">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal5" id="waryong1"></button>
+											<h3>와룡공원(봄)</h3>
+										</div>
+										<div id="myModal5" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>와룡공원(봄)</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/park_sleepingdragon4.jpg" alt="와룡공원(봄)">
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal2" id="hunminjeongum"></button>
-										<h3>훈민정음 해례본</h3>
-									</div>
-									<div id="myModal2" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>훈민정음 해례본</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hunminjeongum.jpg" alt="훈민정음 해례본">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal6" id="waryong2"></button>
+											<h3>와룡공원(여름)</h3>
+										</div>
+										<div id="myModal6" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>와룡공원(여름)</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/waryong_summer.jpg" alt="와룡공원(여름)">
+												</div>>
 											</div>
 										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal3" id="miindo"></button>
-										<h3>신윤복의 미인도</h3>
-									</div>
-									<div id="myModal3" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>신윤복의 미인도</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hyewon-Miindo.jpg" alt="간송미술관 보화각">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal7" id="waryong3"></button>
+											<h3>와룡공원(가을)</h3>
+										</div>
+										<div id="myModal7" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>와룡공원(가을)</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/waryong_fall.jpg" alt="와룡공원(가을)">
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal4" id="goryeo"></button>
-										<h3>청자운학상감문배병</h3>
-									</div>
-									<div id="myModal4" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>청자운학상감문배병 - 국보 제68호</h2>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal8" id="waryong4"></button>
+											<h3>와룡공원(겨울)</h3>
+										</div>
+										<div id="myModal8" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>와룡공원(겨울)</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/waryong_winter.jpg" alt="와룡공원(겨울)">
+												</div>
 											</div>
-											<div class="modal-body">
-													<img class="modal-content-img" src="./images/Goryeo_Celadon.jpg" alt="간송미술관 보화각">
+										</div>	
+									</div> 
+								
+									<div class="content-text">
+										<p class="text-line">성북동에서 종로구까지 이어지는 한양도성 산책로 중 하나로,</p>
+										<p class="text-line">저는 서울 내에서 유명한 코스인 인왕산보다 더 좋다고 생각합니다.</p>
+										<p class="text-line">산책로 우측으로는 성북동의 모습이 보이고,</p>
+										<p class="text-line">좌측으로는 서울 시내의 모습이 보입니다.</p>
+										<p class="text-line">좌측으로 보이는 풍경은 남산타워부터 롯데타워까지 보이는데,</p>
+										<p class="text-line">낮에 보아도 좋지만, 가장 좋은 것은 저녁 무렵입니다.</p>
+										<p class="text-line">어둑어둑한 밤하늘 아래에서 발하는 서울 도심의 빛무리는</p>
+										<p class="text-line">아름다운 광경을 보여줍니다.</p>
+										<hr class="line2">
+										<p class="text-line">주소: 서울 성북구 성북동 118-2</p>
+									</div>
+								</div>
+							</div>
+							<div id="tab3" class="cont">
+								<div class="content-title">
+									<p>명소 - 심우장</p>
+								</div>
+								<div class="content-wrapper">
+									<div class="content-img-wrapper">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal9" id="simwoojang1"></button>
+											<h3>심우장</h3>
+										</div>
+										<div id="myModal9" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>심우장</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/simwoojang1.jpg" alt="심우장">
+												</div>
 											</div>
 										</div>
-									</div>	
-								</div> 
-								<div class="content-text">
-									<p class="text-line">간송 전형필 선생님께서 설립한 대한민국 최초의 사립미술관으로,</p>
-									<p class="text-line">현재 호림 박물관, 리움 미술관과 더불어 국내 3대 사립 미술관입니다. </p>
-									<p class="text-line">교과서에서 보았던 많은 서화들의 소재지가 이곳이라고 보아도 무방하며,</p>
-									<p class="text-line">10점이상의 국보와 수많은 작품들을 소장하고 있습니다.</p>
-									<p class="text-line">제일 유명한 것은 훈민정음 해례본과 신윤복의 미인도를 말할 수 있겠습니다.</p>
-									<p class="text-line">상설로 전시를 하지 않아서, 전시를 하는 날에는 몇 시간씩 줄을 서는 경우도</p>
-									<p class="text-line">허다한데, 지금은 미리 예약을 하여야 입장이 가능합니다.</p>
-									<hr class="line2">
-									<p class="text-line">주소: 서울시 성북구 성북로 102-11</p>
-									<p class="text-line">링크 : <a href="https://kansong.org/">https://kansong.org/</a></p>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal10" id="simwoojang2"></button>
+											<h3>심우장</h3>
+										</div>
+										<div id="myModal10" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>심우장</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/simwoojang2.jpg" alt="심우장">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal11" id="simwoojang3"></button>
+											<h3>심우장</h3>
+										</div>
+										<div id="myModal11" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>심우장</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/simwoojang3.jpg" alt="심우장">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal12" id="simwoojang4"></button>
+											<h3>한용운 동상</h3>
+										</div>
+										<div id="myModal12" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>한용운 동상</h2>
+												</div>
+												<div class="modal-body">
+														<img class="modal-content-img" src="./images/simwoojang4.jpg" alt="한용운 동상">
+												</div>
+											</div>
+										</div>	
+									</div> 
+									<div class="content-text">
+										<p class="text-line">만해 한용운 선생님께서 마지막까지 머물렀던 장소입니다.</p>
+										<p class="text-line">심우장은 현재 대한민국의 사적 제550호로 지정되어 있습니다.</p>
+										<p class="text-line">'심우장'이란 이름은 불교 선종에서 깨달음의 경지를 일컬을 때,</p>
+										<p class="text-line">이 깨달음의 과정을 잃어버린 소를 찾는 것에 비유하였고,</p>
+										<p class="text-line">한용운 선생님께서 이 과정 중 하나인  </p>
+										<p class="text-line">심우, 곧 '자기의 본성인 소를 찾는다'는 의미로</p>
+										<p class="text-line">집의 이름을 지었다고 합니다.</p>
+										<hr class="line2">
+										<p class="text-line">주소: 서울시 성북구 성북로29길 24</p>
+										<p class="text-line">링크 : <a href="https://bit.ly/37PPh8t">https://bit.ly/37PPh8t</a></p>
+									</div>
+								</div>
+							</div>
+							<div id="tab4" class="cont">
+								<div class="content-title">
+									<p>명소 - 길상사</p>
+								</div>
+								<div class="content-wrapper">
+									<div class="content-img-wrapper">
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal13" id="gilsangsa1"></button>
+											<h3>길상사</h3>
+										</div>
+										<div id="myModal13" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>길상사</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/gilsangsa1.jpg" alt="길상사">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal14" id="gilsangsa2"></button>
+											<h3>길상사</h3>
+										</div>
+										<div id="myModal14" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>길상사</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/gilsansa-bosal.jpg" alt="길상사 관세음보살상">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal15" id="gilsangsa3"></button>
+											<h3>길상사</h3>
+										</div>
+										<div id="myModal15" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>길상사</h2>
+												</div>
+												<div class="modal-body">
+													<img class="modal-content-img" src="./images/gilsangsa2.jpg" alt="길상사">
+												</div>
+											</div>
+										</div>
+										<div class="btn-wrapper">
+											<button class="modal-custom-button" href="#myModal16" id="gilsangsa4"></button>
+											<h3>길상사</h3>
+										</div>
+										<div id="myModal16" class="modal-custom">
+											<div class="modal-content">
+												<div class="modal-header">
+													<span class="close-modal">×</span>
+													<h2>길상사</h2>
+												</div>
+												<div class="modal-body">
+														<img class="modal-content-img" src="./images/gilsangsa3.jpg" alt="길상사">
+												</div>
+											</div>
+										</div>	
+									</div> 
+									<div class="content-text">
+										<p class="text-line">길상사는 입적하신 법정 스님과 관련이 있는 사찰로서</p>
+										<p class="text-line">다른 유명 사찰들과 달리 지어진 지 얼마 되지 않았습니다.</p>
+										<p class="text-line">본래의 땅의 주인이 법정 스님의 "무소유" 책을 읽고,</p>
+										<p class="text-line">감명을 받아 그 땅을 시주하여 설립된 사찰입니다.</p>
+										<p class="text-line">독특한 점을 하나 말하자면, 길상사에 있는 관세음보살상은</p>
+										<p class="text-line">종교화합을 기원하는 마음으로 천주교 신자 최종태 조각가에게</p>
+										<p class="text-line">의뢰하여 만들어졌습니다.</p>
+										<hr class="line2">
+										<p class="text-line">주소: 서울특별시 성북구 선잠로5길 68</p>
+										<p class="text-line">링크 : <a href="http://www.kilsangsa.info/">http://www.kilsangsa.info/</a></p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div id="tab2" class="cont">
-							<div class="content-title">
-								<p>명소 - 와룡공원</p>
-							</div>
-							<div class="content-wrapper">
-								<div class="content-img-wrapper">
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal1" id="waryong1"></button>
-										<h3>와룡공원(봄)</h3>
-									</div>
-									<div id="myModal1" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>와룡공원(봄)</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/gansong.jpg" alt="와룡공원(봄)">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal2" id="waryong2"></button>
-										<h3>와룡공원(여름)</h3>
-									</div>
-									<div id="myModal2" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>와룡공원(여름)</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hunminjeongum.jpg" alt="훈민정음 해례본">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal3" id="waryong3"></button>
-										<h3>와룡공원(가을)</h3>
-									</div>
-									<div id="myModal3" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>와룡공원(가을)</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hyewon-Miindo.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal4" id="waryong4"></button>
-										<h3>와룡공원(겨울)</h3>
-									</div>
-									<div id="myModal4" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>와룡공원(겨울)</h2>
-											</div>
-											<div class="modal-body">
-													<img class="modal-content-img" src="./images/Goryeo_Celadon.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>	
-								</div> 
-								<div class="content-text">
-									<p class="text-line">간송 전형필 선생님께서 설립한 대한민국 최초의 사립미술관으로,</p>
-									<p class="text-line">현재 호림 박물관, 리움 미술관과 더불어 국내 3대 사립 미술관입니다. </p>
-									<p class="text-line">교과서에서 보았던 많은 서화들의 소재지가 이곳이라고 보아도 무방하며,</p>
-									<p class="text-line">10점이상의 국보와 수많은 작품들을 소장하고 있습니다.</p>
-									<p class="text-line">제일 유명한 것은 훈민정음 해례본과 신윤복의 미인도를 말할 수 있겠습니다.</p>
-									<p class="text-line">상설로 전시를 하지 않아서, 전시를 하는 날에는 몇 시간씩 줄을 서는 경우도</p>
-									<p class="text-line">허다한데, 지금은 미리 예약을 하여야 입장이 가능합니다.</p>
-									<hr class="line2">
-									<p class="text-line">주소: 서울 성북구 성북동 118-2</p>
-								</div>
-							</div>
-						</div>
-						<div id="tab3" class="cont">
-							<div class="content-title">
-								<p>명소 - 간송 미술관</p>
-							</div>
-							<div class="content-wrapper">
-								<div class="content-img-wrapper">
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal1" id="gansongbohwagak"></button>
-										<h3>간송미술관 보화각</h3>
-									</div>
-									<div id="myModal1" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>간송미술관 보화각</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/gansong.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal2" id="hunminjeongum"></button>
-										<h3>훈민정음 해례본</h3>
-									</div>
-									<div id="myModal2" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>훈민정음 해례본</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hunminjeongum.jpg" alt="훈민정음 해례본">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal3" id="miindo"></button>
-										<h3>신윤복의 미인도</h3>
-									</div>
-									<div id="myModal3" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>신윤복의 미인도</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hyewon-Miindo.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal4" id="goryeo"></button>
-										<h3>청자운학상감문배병</h3>
-									</div>
-									<div id="myModal4" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>청자운학상감문배병 - 국보 제68호</h2>
-											</div>
-											<div class="modal-body">
-													<img class="modal-content-img" src="./images/Goryeo_Celadon.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>	
-								</div> 
-								<div class="content-text">
-									<p class="text-line">간송 전형필 선생님께서 설립한 대한민국 최초의 사립미술관으로,</p>
-									<p class="text-line">현재 호림 박물관, 리움 미술관과 더불어 국내 3대 사립 미술관입니다. </p>
-									<p class="text-line">교과서에서 보았던 많은 서화들의 소재지가 이곳이라고 보아도 무방하며,</p>
-									<p class="text-line">10점이상의 국보와 수많은 작품들을 소장하고 있습니다.</p>
-									<p class="text-line">제일 유명한 것은 훈민정음 해례본과 신윤복의 미인도를 말할 수 있겠습니다.</p>
-									<p class="text-line">상설로 전시를 하지 않아서, 전시를 하는 날에는 몇 시간씩 줄을 서는 경우도</p>
-									<p class="text-line">허다한데, 지금은 미리 예약을 하여야 입장이 가능합니다.</p>
-									<hr class="line2">
-									<p class="text-line">주소: 서울시 성북구 성북로 102-11</p>
-									<p class="text-line">링크 : <a href="https://kansong.org/">https://kansong.org/</a></p>
-								</div>
-							</div>
-						</div>
-						<div id="tab4" class="cont">
-							<div class="content-title">
-								<p>명소 - 간송 미술관</p>
-							</div>
-							<div class="content-wrapper">
-								<div class="content-img-wrapper">
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal1" id="gansongbohwagak"></button>
-										<h3>간송미술관 보화각</h3>
-									</div>
-									<div id="myModal1" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>간송미술관 보화각</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/gansong.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal2" id="hunminjeongum"></button>
-										<h3>훈민정음 해례본</h3>
-									</div>
-									<div id="myModal2" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>훈민정음 해례본</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hunminjeongum.jpg" alt="훈민정음 해례본">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal3" id="miindo"></button>
-										<h3>신윤복의 미인도</h3>
-									</div>
-									<div id="myModal3" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>신윤복의 미인도</h2>
-											</div>
-											<div class="modal-body">
-												<img class="modal-content-img" src="./images/Hyewon-Miindo.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>
-									<div class="btn-wrapper">
-										<button class="modal-custom-button" href="#myModal4" id="goryeo"></button>
-										<h3>청자운학상감문배병</h3>
-									</div>
-									<div id="myModal4" class="modal-custom">
-										<div class="modal-content">
-											<div class="modal-header">
-												<span class="close-modal">×</span>
-												<h2>청자운학상감문배병 - 국보 제68호</h2>
-											</div>
-											<div class="modal-body">
-													<img class="modal-content-img" src="./images/Goryeo_Celadon.jpg" alt="간송미술관 보화각">
-											</div>
-										</div>
-									</div>	
-								</div> 
-								<div class="content-text">
-									<p class="text-line">간송 전형필 선생님께서 설립한 대한민국 최초의 사립미술관으로,</p>
-									<p class="text-line">현재 호림 박물관, 리움 미술관과 더불어 국내 3대 사립 미술관입니다. </p>
-									<p class="text-line">교과서에서 보았던 많은 서화들의 소재지가 이곳이라고 보아도 무방하며,</p>
-									<p class="text-line">10점이상의 국보와 수많은 작품들을 소장하고 있습니다.</p>
-									<p class="text-line">제일 유명한 것은 훈민정음 해례본과 신윤복의 미인도를 말할 수 있겠습니다.</p>
-									<p class="text-line">상설로 전시를 하지 않아서, 전시를 하는 날에는 몇 시간씩 줄을 서는 경우도</p>
-									<p class="text-line">허다한데, 지금은 미리 예약을 하여야 입장이 가능합니다.</p>
-									<hr class="line2">
-									<p class="text-line">주소: 서울시 성북구 성북로 102-11</p>
-									<p class="text-line">링크 : <a href="https://kansong.org/">https://kansong.org/</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</article>
+				</article>		
 		</section>
 	</div>
 	<footer>

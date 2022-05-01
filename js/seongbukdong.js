@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-// Get the button that opens the modal
+// 모달창 오픈용
 const btn = document.querySelectorAll("button.modal-custom-button");
 
-// All page modals
+// 모든 모달을 저장
 const modals = document.querySelectorAll('.modal-custom');
 
-// Get the <span> element that closes the modal
+// 모달창 종료용
 const spans = document.getElementsByClassName("close-modal");
 
-// When the user clicks the button, open the modal
+// 버튼 클릭 시 모달 창 띄우기
 for (let i = 0; i < btn.length; i++) {
     btn[i].onclick = function (e) {
         e.preventDefault();
@@ -18,7 +18,7 @@ for (let i = 0; i < btn.length; i++) {
     }
 }
 
-// When the user clicks on <span> (x), close the modal
+// x 클릭 시 모달창 닫기
 for (let i = 0; i < spans.length; i++) {
     spans[i].onclick = function () {
         for (let index in modals) {
@@ -27,7 +27,7 @@ for (let i = 0; i < spans.length; i++) {
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// 모달 외부를 클릭 시 모달창 닫기
 window.onclick = function (event) {
     if (event.target.classList.contains('modal-custom')) {
         for (let index in modals) {
@@ -36,8 +36,8 @@ window.onclick = function (event) {
     }
 }
 
-const tabList = document.querySelectorAll('.tab_menu .column-list li');
-const contents = document.querySelectorAll('.column-contents .cont_area .cont');
+const tabList = document.querySelectorAll('.tab_menu .list li');
+const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
 let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
 
 for(let i = 0; i < tabList.length; i++){
@@ -59,6 +59,5 @@ for(let i = 0; i < tabList.length; i++){
     document.querySelector(activeCont).style.display = 'block';
   });
 }
-
 
 });
