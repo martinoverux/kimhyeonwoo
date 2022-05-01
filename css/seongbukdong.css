@@ -1,7 +1,7 @@
 #container {
 	background-color:#fff;
 	width: 1024px;
-	height: 2160px;
+	height: 1400px;
 	margin: 0 auto;
 }
 
@@ -16,17 +16,39 @@ hr.line2{
 section {
 	background-color:#fff;
 	width: 1024px;
-	height: 1080px;
+	height: 1250px;
 }
 
 .column-wrap {
 	display: flex;
 	flex-direction: row;
-	justify-content: left;
+	justify-content: space-between;
 	width: 1024px;
 	flex-wrap: wrap;
-	height: 400px;
+	height: 450px;
+	margin-top: 30px;
 }
+
+.column-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 1024px;
+	flex-wrap: wrap;
+	height: 600px;
+	margin-top: 30px;
+}
+
+.content-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 1024px;
+	flex-wrap: wrap;
+	height: 600px;
+	margin-top: 30px;
+}
+
 
 .sb-title {
 	display: flex;
@@ -54,7 +76,7 @@ section {
 	justify-content: left;
 	flex-wrap: wrap;
 	width: 510px;
-	height: 400px;
+	height: 450px;
 }
 
 
@@ -64,25 +86,71 @@ section {
 	justify-content: right;
 	flex-wrap: wrap;
 	width: 510px;
-	height: 400px;
+	height: 450px;
 }
 
+ul.columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 
-.column-list {
+	align-items: center;
+	flex-wrap: wrap;
+	list-style: none;
 	width: 500px;
 	height: 390px;
+	padding-left: 10px;
 }
 
-.column-list ul {
-	display: felx;
-	flex-direction: row;
-}
-.column-list li {
-	list-style: none;
+.column {
 	width: 185px;
 	height: 130px;
+	text-decoration: none;
 }
 
+.content-img-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	flex-wrap: wrap;
+	width: 510px;
+	height: 450px;
+}
+
+.content-text {
+	width: 510px;
+	height: 450px;
+}
+
+.content-img {
+	width: 220px;
+	height: 150px;
+}
+
+.content-img:hover {
+	transform: scale(1.1);
+}
+
+.text-line {
+	color:  rgb(24,189,222);
+	font-family: 'Dongle', sans-serif;
+	font-size: 1.8rem;
+	margin: 5px;
+}
+
+.text-line a {
+	text-decoration: none;
+	color:  rgb(24,189,222);
+	font-family: 'Dongle', sans-serif;
+	font-size: 1.8rem;
+}
+
+.text-line a:active, .text-line a:visited, .text-link a:link, .text-link a:hover {
+	text-decoration: none;
+	color:  rgb(24,189,222);
+	font-family: 'Dongle', sans-serif;
+	font-size: 1.8rem;
+}
 
 .sb-title > img {
 	width: 50px;
@@ -92,6 +160,7 @@ section {
 .thumb-area {
 	width: 185px;
 	height: 130px;
+	margin: 3px;
 }
 
 .img-cultural-tour {
@@ -103,10 +172,68 @@ section {
 	font-family: 'Nanum Pen Script', cursive;
     font-size: 1.5rem;
     border-radius: 7%;
-    margin: 5px;
     color: rgb(24,189,222);
-    text-decoration: none;
-    border-right: 1px #fff solid;
-    width: 8em;
-    height: 2.5em;
+    width: 190px;
+    height: 2rem;
+	text-align: center;
+	margin: 0;
+}
+
+.content-title p {
+	color: orange;
+	font-size: 2rem;
+	font-family: 'Jua', sans-serif;
+	text-shadow: 2px 2px 2px orangered;
+	text-align: center;
+}
+
+/* =========================== 모달 창 ============================================ */
+.modal_btn {
+	width: 230px;
+	height: 16px;
+	background-color: #fff;
+	border: none;
+}
+
+.modal_wrap{
+	display: none;
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	top:50;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+	background:#eee;
+	z-index: 2;
+}
+
+.modal-content-img{
+	width: 600px;
+	height: 600px;
+}
+
+.black_bg{
+	display: none;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0,0, 0.5);
+	top: 80;
+	left: 0;
+	z-index: 1;
+}
+.modal_close{
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	top: -30px;
+	right: 0;
+}
+.modal_close> a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* background:  */
+	text-indent: -9999px;
 }
