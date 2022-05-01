@@ -187,53 +187,62 @@ ul.columns {
 	text-align: center;
 }
 
-/* =========================== 모달 창 ============================================ */
-.modal_btn {
+/* =========================== 모달 창 ============================================*/
+.modal-custom-button {
 	width: 230px;
-	height: 16px;
+	height: 155px;
 	background-color: #fff;
 	border: none;
 }
-
-.modal_wrap{
-	display: none;
-	width: 800px;
-	height: 800px;
-	position: absolute;
-	top:50;
-	left: 50%;
-	margin: -250px 0 0 -250px;
-	background:#eee;
-	z-index: 2;
+.modal-custom {
+	display: none; 
+	position: fixed; 
+	z-index:1; 
+	padding-top:100px; 
+	left:0; top:0; 
+	width:100%; 
+	height:100%; 
+	overflow:auto;
+	background-color:rgb(0,0,0); 
+	background-color:rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+	 position: relative; 
+	 background-color:#fefefe; 
+	 margin:auto; padding:0; 
+	 width:80%; 
+	 -webkit-animation-name:animatetop; 
+	 -webkit-animation-duration:0.4s; 
+	 animation-name:animatetop; 
+	 animation-duration:0.4s
 }
 
-.modal-content-img{
-	width: 600px;
-	height: 600px;
+@-webkit-keyframes animatetop {
+     from{top:-300px; opacity:0}
+     to{top:0; opacity:1}
+}
+@keyframes animatetop {
+    from{top:-300px; opacity:0}
+    to{top:0; opacity:1}
+}
+.close-modal {
+	color:white;
+	float:right;
+	font-size:28px; 
+	font-weight:bold; 
+}
+.close-modal:hover, .close-modal:focus {
+	color:#000; 
+	text-decoration:none; 
+	cursor:pointer; 
+}
+.modal-header{
+	padding:2px 16px; 
+	background-color:#5cb85c; 
+	color:white; 
 }
 
-.black_bg{
-	display: none;
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color:rgba(0, 0,0, 0.5);
-	top: 80;
-	left: 0;
-	z-index: 1;
+.modal-body{
+	padding:2px 16px; 
 }
-.modal_close{
-	width: 26px;
-	height: 26px;
-	position: absolute;
-	top: -30px;
-	right: 0;
-}
-.modal_close> a{
-	display: block;
-	width: 100%;
-	height: 100%;
-	/* background:  */
-	text-indent: -9999px;
-}
+
