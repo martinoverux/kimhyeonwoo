@@ -13,43 +13,55 @@ let slides = document.querySelectorAll('.visual'), // 슬라이드 아이템
     pagerHTML = '';
 
 
+
+
 // 슬라이드 아이템 자동으로 가로 정렬 및 갯수만큼 페이지네이션 버튼 자동 생성
 for(let i = 0; i < slideCount; i++) {
   slides[i].style.left = `${i * 100}%`;
-  // pagerHTML += `<li data-index="${i}">${i + 1}</li>`;
-  pagerHTML += `<li data-index="${i}"><img src="./images/circle.png"></li>`;
+  pagerHTML += `<li data-index="${i}"></li>`;
+
   pagerContainer.innerHTML = pagerHTML;
 }
   let pagerBtns = document.querySelectorAll('.imagePager li');
 
-// 슬라이드 이동 함수
-function goToSlide(idx) {
-  sliderContainer.classList.add('animated');
-  sliderContainer.style.left = `${idx * -100}%`;
-  currentIndex = idx;
+// 이미지 전환을 매끄럽게 하기 위한 이미지 복사 함수
+  
+const cloneElement = () => { 
+  sliderContainer.prepend(slides[slides.length -1].cloneNode(true)); 
+  sliderContainer.append(slides[0].cloneNode(true)); 
+};
 
-  pagerBtns.forEach(pagerBtn => {
-    pagerBtn.classList.remove('active');
+
+  // 슬라이드 이동 함수
+  function goToSlide(idx) {
+
+    sliderContainer.classList.add('animated');
+    sliderContainer.style.left = `${idx * -100}%`;
+    currentIndex = idx;
+    
+    pagerBtns.forEach(pagerBtn => {
+      pagerBtn.classList.remove('active');
+    });
+    pagerBtns[idx].classList.add('active');
+  }
+  
+  goToSlide(0);
+
+  // 버튼을 클릭시 슬라이드 이동
+  btnPrev.addEventListener('click', () => {
+    if(currentIndex != 0) {
+      goToSlide(currentIndex - 1);
+    } else {
+      goToSlide(slideCount - 1);
+    }
   });
-  pagerBtns[idx].classList.add('active');
-}
-goToSlide(0);
-
-// 버튼을 클릭시 슬라이드 이동
-btnPrev.addEventListener('click', () => {
-  if(currentIndex != 0) {
-    goToSlide(currentIndex - 1);
-  } else {
-    goToSlide(slideCount - 1);
-  }
-});
-btnNext.addEventListener('click', () => {
-  if(currentIndex < slideCount - 1) {
-    goToSlide(currentIndex + 1);
-  } else {
-    goToSlide(0);
-  }
-});
+  btnNext.addEventListener('click', () => {
+    if(currentIndex < slideCount - 1) {
+      goToSlide(currentIndex + 1);
+    } else {
+      goToSlide(0);
+    }
+  });
 
 // 버튼 기능 업데이트 함수
 function updateNav() {
@@ -73,6 +85,7 @@ function startAutoSlide() {
   }, 3000);
 }
 startAutoSlide();
+cloneElement();
 
 sliderWrapper.addEventListener('mouseenter', () => {
   clearInterval(timer);
@@ -90,3 +103,6 @@ pagerBtns.forEach(pagerBtn => {
   });
 });
 });
+
+
+
