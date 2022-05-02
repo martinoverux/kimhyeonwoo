@@ -1,7 +1,7 @@
 #container {
 	background-color:#fff;
 	width: 1024px;
-	height: 3600px;
+	height: 3300px;
 	margin: 0 auto;
 }
 
@@ -24,11 +24,10 @@ hr.line2{
 }
 
 .meaning{
+    display: flex;
+    flex-direction: column;
     width: 1024px;
-    height: 580px;
-    background-image: url(../images/chair3.png);
-    background-size: 100% 100%;
-    border-radius: 20%;
+    height: 750px;
 }
 
 .meaning h2{
@@ -52,22 +51,41 @@ hr.line2{
     margin-top: 10px;
     text-align: center;
 }
+.meaning-inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 512px;
+    height: 530px;
+}
+
+.meaning-image{
+    width: 500px;
+    height: 500px;
+}
+
+.meaning-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+}
 
 .meaning-text {
-    width: 1024px;
-    height: 450px;
+    width: 500px;
+    height: 530px;
 }
 
 .meaning-text p {
+    font-family: 'Jua', sans-serif;
     text-align: center;
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 1.35rem;
+    color: #000;
     margin: 10px 0;
 }
 
 #content {
     width: 1024px;
-    height: 3000px;
+    height: 2800px;
 }
 
 .sectionBackgroudnImage{
