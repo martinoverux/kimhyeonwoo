@@ -213,21 +213,62 @@ ul.column-list {
 .tab_menu .list .btn-tab{
 	font-size:13px;
 }
-.tab_menu .cont_area .cont{
+
+.article-contents {
+	width: 1024px; 
+	height: 450px; 
+}
+.cont{
 	display:none; 
 	position:absolute; 
-	top:500px; 
-	left:0; 
+	top: auto; 
+	left: auto; 
 	background:#fff; 
 	color:#fff; 
 	text-align:center; 
 	width: 1024px; 
 	height: 450px; 
-	line-height:100px;
 }
 
-.cont p{}
+.default-contents {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-between;
+	width: 900px; 
+	height: 450px; 
+}
 
+.default-text {
+	width: 400px; 
+	height: 450px; 
+	color: #000;
+	font-size: 1.1	rem;
+	margin: 2px 0;
+	font-family: 'Jua', sans-serif;
+	text-align: center;
+}
+
+.default-cont h3 {
+	width: 1024px; 
+	height: 50px; 
+	text-align: center;
+	color:  rgb(24,189,222);
+	font-family: 'jua', sans-serif;
+	font-style: italic;
+	font-size: 50px;
+	text-shadow: 4px 2px 0px orange;
+}
+.default-image {
+	width: 500px; 
+	height: 450px; 
+}
+.default-image img {
+	width: 500px; 
+	height: 450px; 
+	border-radius: 20%;
+}
 
 /* =========================== 모달 창 ============================================*/
 /* -- 간송 이미지-- */
@@ -317,40 +358,23 @@ ul.column-list {
 }
 /* -- 나폴레옹 -- */
 
-/* #napoleon1 {
-	background-image: url(../images/napoloen1.jpg);
-	background-size: 100% 100%;
-}
-#napoleon2 {
-	background-image: url(../images/napoloen2.jpg);
-	background-size: 100% 100%;
-}
-
-#napoleon3 {
-	background-image: url(../images/napoloen3.jpg);
-	background-size: 100% 100%;
-}
-
-#napoleon4 {
-	background-image: url(../images/napoloen4.jpg);
-	background-size: 100% 100%;
-} */
 #napoleon1 {
-	background-image: url(../images/breadfactory.jpg);
+	background-image: url(../images/napoleon1.jpg);
 	background-size: 100% 100%;
+	border-radius: 50%;
 }
 #napoleon2 {
-	background-image: url(../images/breadfactory.jpg);
+	background-image: url(../images/napoleon2.jpg);
 	background-size: 100% 100%;
 }
 
 #napoleon3 {
-	background-image: url(../images/breadfactory.jpg);
+	background-image: url(../images/napoleon3.jpg);
 	background-size: 100% 100%;
 }
 
 #napoleon4 {
-	background-image: url(../images/breadfactory.jpg);
+	background-image: url(../images/napoleon4.jpg);
 	background-size: 100% 100%;
 }
 
@@ -486,13 +510,20 @@ ul.column-list {
 	height: 600px;
 }
 
+.btn-wrapper{
+
+	height: 200px;
+}
+
 
 .btn-wrapper h3 {
+	display: flex;
+	justify-content: center;
 	color: orange;
 	font-size: 1.5rem;
 	font-family: 'Jua', sans-serif;
 	text-shadow: 2px 2px 2px orangered;
 	text-align: center;
-	margin: 0;
-	height: 20px;
+	margin: 0px;
+	height: 30px;
 }

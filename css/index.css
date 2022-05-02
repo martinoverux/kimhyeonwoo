@@ -58,7 +58,7 @@ section {
 }
 
 .slider-box {
-	width: 615%;
+	width: 1000%;
 	position: relative;
 	transition-duration: 0.5s;
 	transform: translate3d();
@@ -70,7 +70,7 @@ section {
 }
 
 .visual img{
-	display: table;
+	 display: table;
 	 float: left; 
 	 width: 1024px; 
 	 height: 720px;
