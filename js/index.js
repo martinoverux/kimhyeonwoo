@@ -26,11 +26,11 @@ for(let i = 0; i < slideCount; i++) {
 
 // 이미지 전환을 매끄럽게 하기 위한 이미지 복사 함수
   
-const cloneElement = () => { 
-  sliderContainer.prepend(slides[slides.length -1].cloneNode(true)); 
-  sliderContainer.append(slides[0].cloneNode(true)); 
-};
-
+// const cloneElement = () => { 
+//   sliderContainer.prepend(slides[slides.length -1].cloneNode(true)); 
+//   sliderContainer.append(slides[0].cloneNode(true)); 
+// };
+// cloneElement();
 
   // 슬라이드 이동 함수
   function goToSlide(idx) {
@@ -85,7 +85,6 @@ function startAutoSlide() {
   }, 3000);
 }
 startAutoSlide();
-cloneElement();
 
 sliderWrapper.addEventListener('mouseenter', () => {
   clearInterval(timer);

@@ -35,15 +35,6 @@ section {
 	height: 50px;
 }
 
-.bx-controls img {
-	height: 50px;
-	width: 50px;
-}
-.bx-control-prev_next img {
-	height: 50px;
-	width: 50px;
-}
-
 .bx-wrapper {
 	position: relative;
 	max-width: 100%;
@@ -79,7 +70,7 @@ section {
 
 .imagePager {
 	position: absolute;
-	top: 1090px;
+	top: 1100px;
 	left: 791.5px;
 	border: none;
 }
@@ -99,27 +90,43 @@ section {
 	transform: scale(1.3);
 	transition: .3s  linear;
 }
-
-.bx-prev, .bx-next { 
-	position: absolute; 
-	top: 50%; 
-	transform: translateY(-50%);
-	display: inline-block;
-	width: 4rem;
-	height: 100%;
-	background-color: #fff;
-	border: none;
- }
+.imagePager li:hover {
+	transform: scale(1.3);
+}
 
 .bx-prev.disabled, .bx-next.disabled { 
 	display: none;
 }
 
 .bx-prev { 
-	left: 0; 
+	position: absolute;
+	background-image: url(../images/rewind.png);
+	background-size: 100% 100%;
+	background-color: #fff;
+	border: none;
+	width: 50px;
+	height: 50px; 
+	top: 1100px;
+	left: 780px;
 }
 .bx-next { 
-	right: 0; 
+	position: absolute;
+	background-image: url(../images/next.png);
+	background-size: 100% 100%;
+	background-color: #fff;
+	border: none;
+	width: 50px;
+	height: 50px;
+	top: 1100px;
+	right: 770px;
+
+}
+
+.bx-prev:hover { 
+	transform: scale(1.2);
+}
+.bx-next:hover { 
+	transform: scale(1.2);
 }
 
 /* ==================================== aside ====================================== */
