@@ -1,5 +1,9 @@
 function searchAddress() {
+    const width = 500;
+    const height = 600;
     new daum.Postcode({
+        width: width,
+        height: height,
         oncomplete: function(data) {
             // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
@@ -43,7 +47,10 @@ function searchAddress() {
             // 커서를 상세주소 필드로 이동한다.
             document.getElementById("address_detail").focus();
         }
-    }).open();
+    }).open({
+        left: (window.screen.width /2 ) -(width / 2 ),
+        height: (window.screen.height /2 ) -(height / 2 )
+    });
 }
 
  function signUpVaildate(){
@@ -119,4 +126,23 @@ function searchAddress() {
 //         }
 //     });
 // }
+
+const target = document.querySelectorAll('.btn_open');
+const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
+let targetID;
+
+// 팝업 열기
+for(let i = 0; i < target.length; i++){
+  target[i].addEventListener('click', function(){
+    targetID = this.getAttribute('href');
+    document.querySelector(targetID).style.display = 'block';
+  });
+}
+
+// 팝업 닫기
+for(let j = 0; j < target.length; j++){
+  btnPopClose[j].addEventListener('click', function(){
+    this.parentNode.parentNode.style.display = 'none';
+  });
+}
 

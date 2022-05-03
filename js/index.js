@@ -29,7 +29,7 @@ for(let i = 0; i < slideCount; i++) {
 // const cloneElement = () => { 
 //   sliderContainer.prepend(slides[slides.length -1].cloneNode(true)); 
 //   sliderContainer.append(slides[0].cloneNode(true)); 
-// };
+// };  
 // cloneElement();
 
   // 슬라이드 이동 함수
