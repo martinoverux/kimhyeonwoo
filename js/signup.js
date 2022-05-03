@@ -99,50 +99,8 @@ function searchAddress() {
        return true;
 }
 
-// function checkId() {
-//     $('#error-id').hideError();
-//     $('#success-id').hideError();
-//     let id = $('#id').val();
-
-//     $.ajax({
-//         "url": '/check-id',
-//         "type": "GET",
-//         "data": {
-//             id: id
-//         },
-//         success: function(response){
-//             $('#success-id').text(response.msg);
-//             $('#success-id').showError();
-//         },
-//         error: function(request, status, err) {
-//             let response = request.responseJSON
-//             if(request.status == 500){
-//                 alert(response.msg);
-//             }
-//             else{
-//                 $("#"+response.data.id).showError(response.data.content);
-//                 $("#"+response.data.focusId).focus();
-//             }
-//         }
-//     });
-// }
-
-const target = document.querySelectorAll('.btn_open');
-const btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
-let targetID;
-
-// 팝업 열기
-for(let i = 0; i < target.length; i++){
-  target[i].addEventListener('click', function(){
-    targetID = this.getAttribute('href');
-    document.querySelector(targetID).style.display = 'block';
-  });
+function checkId() {
+ ;
 }
 
-// 팝업 닫기
-for(let j = 0; j < target.length; j++){
-  btnPopClose[j].addEventListener('click', function(){
-    this.parentNode.parentNode.style.display = 'none';
-  });
-}
 

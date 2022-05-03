@@ -85,70 +85,13 @@
 											<label id="auto-login-label" for="auto-login"><span></span><p>자동 로그인</p></label>
 										</div>
 										<div class="openBtn">
-											<button class="openButton" onclick="openFormId()">아이디 찾기</button>
-											<button class="openButton" onclick="openFormPassword()">비밀번호 찾기</button>
+											<button class="openButton" onclick="openFindId()">아이디 찾기</button>
+											<button class="openButton" onclick="openFindPassword()">비밀번호 찾기</button>
 										</div>
 									</div>
-										<div class="find-id">
-											<div class="formPopupId" id="popupFormId">
-												<form action="" class="formContainer" id="formId">
-													<div class="pop-title-id">
-														<h2>아이디 찾기</h2>
-													</div>
-													<div class="pop-id-inner-wrapper">
-														<div class="pop-id-inner">
-															<label for="nameId"><strong>이름</strong></label>
-															<input type="text" id="nameId" placeholder="이름을 입력하세요." name="nameId" required>
-														</div>
-														<div class="pop-id-inner">
-															<label for="emailId"><strong>email</strong></label>	
-															<input type="email" id="emailId" placeholder="이메일을 입력하세요" name="emailId" required>
-															<button type="submit" class="btn" onclick="sendCertificationNumForId()">인증번호 전송</button>
-														</div>
-														<div class="pop-id-inner">
-															<label for="certificationNumId"><strong>인증번호</strong></label>	
-															<input type="text" id="certificationNumId" placeholder="인증번호 6자리" name="certificationNumId" required>
-															<button type="submit" class="btn" onclick="">인증번호 확인</button>
-														</div>
-														<div class="pop-id-inner-btn" id="cancel-inner">
-															<button type="button" class="btn-cancel" onclick="closeFormId()">Close</button>
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="find-password">
-											<div class="formPopupPassword" id="popupFormPassword">
-												<form action="" class="formContainer" id="formPassword">
-													<div class="pop-title-password">
-														<h2>비밀번호 찾기</h2>
-													</div>
-													<div class="pop-password-inner-wrapper">
-														<div class="pop-password-inner">
-															<label for="idPw"><strong>아이디</strong></label>
-															<input type="text" id="idPw" placeholder="아이디를 입력하세요." name="idPw" required>
-														</div>
-														<div class="pop-password-inner">
-															<label for="emailPw"><strong>email</strong></label>	
-															<input type="email" id="emailPw" placeholder="이메일을 입력하세요" name="emailPw" required>
-															<button type="submit" class="btn" onclick="sendCertificationNumForPassword()">인증번호 전송</button>
-														</div>
-														<div class="pop-password-inner">
-															<label for="certificationNumPw"><strong>인증번호</strong></label>	
-															<input type="text" id="certificationNumPw" placeholder="인증번호 6자리" name="certificationNumPw" required>
-															<button type="submit" class="btn" onclick="">인증번호 확인</button>
-														</div>
-														<div class="pop-password-inner-btn" id="cancel-inner">
-															<button type="button" class="btn-cancel" onclick="closeFormPassword()">Close</button>
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
 									<br><br>
 									<button type="submit" class="btn-login">로그인</button>
 								</form>
-
 						</div>
 					</article>
 				</div>
