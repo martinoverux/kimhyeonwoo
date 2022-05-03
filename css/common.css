@@ -42,11 +42,11 @@ header a {
 	color: rgb(24,189,222);
 	text-decoration: none;
 	border-right: 1px #fff solid;
-	width: 8em;
+	width: 8rem;
 	height: 2.5em;
 }
 
-.subExploreCulture a {
+.subExplorelife a {
     font-size: 30px;
 }
 
@@ -64,7 +64,7 @@ ul.navi {
 	display: flex;
 	flex-direction: row;
 	justify-content: right;
-	margin: 0px 0px 0px 325px;
+	margin-left: 340px;
 	width: 650px;
 	height: 50px
 }
@@ -73,12 +73,12 @@ ul.navi li {
 	list-style: none;
 	margin: 0 auto;
 	height: 40px;
-	width: 200px;
     text-align: center;
 }
 
 ul.navi li a {
     text-shadow: 2px 0px 4px orange;
+	width: 350px;
 }
 
 ul.li div, ul.navi div, header li div {

@@ -10,5 +10,6 @@ function signUpVaildate(){
         alert('비밀번호가 비밀번호 재입력에 입력된 값과 일치하지 않습니다. 다시 입력해주세요.');
         return false;
     }
+       alert("비밀번호 재설정이 완료되었습니다.")
        return true;
 }
