@@ -154,8 +154,8 @@ document.addEventListener('submit', (e) => {
     }
   });
 
-const enrollMemberInfo = () => {
-    console.log("saveGuestbook 호출!");
+    const enrollMemberInfo = () => {
+    console.log("enrollMemberInfo 호출!");
     const useridVal = document.querySelector("#id").value;
     const userpasswordVal = document.querySelector("#password").value;
     const usernameVal = document.querySelector("#user_name").value;

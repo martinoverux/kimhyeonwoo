@@ -55,6 +55,19 @@ header a:hover {
 	background-color: rgb(24,189,222);
 }
 
+#hoverchange:hover {
+	font-size: 40px;
+}
+#hoverchange:hover {
+	font-size: 0;
+}
+#hoverchange:hover:before  {
+	content: "나의 삶의 자리";
+	font-size: 40px;
+	background-color: rgb(24,189,222);
+	border-radius: 7%;
+}
+
 #subTitle {
 	margin: 0px 600px 10px 10px;
 }

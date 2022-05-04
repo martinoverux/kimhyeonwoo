@@ -39,7 +39,7 @@
 				<nav>
 					<ul class="navi">
 						<li class="mainMenu"><a href="aboutme.html">About Me</a></li>
-						<li class="mainMenu"><a href="seongbukdong.html">Mein Sitz im Leben</a>
+						<li class="mainMenu"><a href="seongbukdong.html" id="hoverchange">Mein Sitz im Leben</a>
 							<div class="subExplorelife">
 								<a href="seongbukdong.html">성북동</a>
 						</li>
@@ -103,7 +103,7 @@
 						<div class="row_area">
 							<div class="input_wrapper_check">
 								<div class="input_container">
-									<input type="text" id="email" name="email" placeholder="이메일 입력" required>
+									<input type="text" id="email" name="email" placeholder="이메일 입력" required readonly>
 								</div>
 							</div>
 							<button onclick="openCertEmail()" type="button" class="btn_blue_id-email">본인 인증</button>
@@ -176,7 +176,7 @@
 						</div>
 					</div>
 					<br><br>
-					<button type="submit" class="btn-signup" >회원가입</button>
+					<button type="submit" class="btn-signup" onclick="enrollMemberInfo();">회원가입</button>
 				</form>
 				<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 			</section>

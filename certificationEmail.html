@@ -8,15 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle:wght@300;400;700&family=Gamja+Flower&family=Jua&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/certificationEmail.css">
-    <script src="./js/certificationemail.js"></script>
-	<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
 	<script type="text/javascript">
-   		(function(){
-      		emailjs.init("iiBUjT4gKhsdLuwTY");
-  		})();
-	</script>
+        (function(){
+            emailjs.init("iiBUjT4gKhsdLuwTY");
+        })();
+    </script>
+    <script src="./js/certificationemail.js"></script>
     <title>certificationemail</title>
 </head>
 <body>
@@ -29,20 +28,19 @@
                 <div class="pop-cert-inner-wrapper">
                     <div class="pop-cert-inner">
                         <label for="nameId"><strong>이름</strong></label>
-                        <input type="text" id="nameId" placeholder="이름을 입력하세요." name="nameId">
+                        <input type="text" id="nameId" placeholder="이름을 입력하세요." name="nameId" required>
                     </div>
                     <div class="pop-cert-inner">
                         <label for="emailId"><strong>email</strong></label>	
-                        <input type="email" id="emailId" placeholder="이메일을 입력하세요" name="emailId" >
-                        <button type="submit" class="btn" onclick="sendCertificationCodeForCert()">인증번호 전송</button>
+                        <input type="email" id="emailId" placeholder="이메일을 입력하세요" name="emailId" required >
+                        <button type="submit" class="btn" id="emailSend" onclick="sendCertcode()">인증번호 전송</button>
                     </div>
                     <div class="pop-cert-inner">
                         <label for="certificationcode"><strong>인증번호</strong></label>	
-                        <input type="text" id="certificationcode" placeholder="인증번호 6자리" name="certificationcode" >
-                        <button type="submit" class="btn" onclick="">인증번호 확인</button>
+                        <input type="text" id="certificationcode" placeholder="인증번호 6자리" name="certificationcode"  >
+                        <button type="submit" class="btn" onclick="checkCertCode();">인증번호 확인</button>
                     </div>
                     <div class="pop-cert-inner-btn" id="cancel-inner">
-                        <button type="button" class="btn-confirm" onclick="certEmailConfirm()">확인</button>
                         <button type="button" class="btn-cancel" onclick="self.close();">닫기</button>
                     </div>
                 </div>
