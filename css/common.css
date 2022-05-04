@@ -76,6 +76,13 @@ ul.navi li {
     text-align: center;
 }
 
+.mainMenu:first-of-type::after, .mainMenu:last-of-type::before {
+	content: "ㅣ";
+	color:  rgb(24,189,222);
+	font-size: 1.47rem;
+	
+  }
+
 ul.navi li a {
     text-shadow: 2px 0px 4px orange;
 	width: 350px;
@@ -84,6 +91,7 @@ ul.navi li a {
 ul.li div, ul.navi div, header li div {
 	display: none;
 }
+
 
 ul.member > li:hover div, ul.navi > li:hover div  {
 	display: block; 

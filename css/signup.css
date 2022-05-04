@@ -48,14 +48,16 @@ body form > p {
     padding: 0px;
 }
 
-#id, #phone  {
-    width: 210px;
+#id, #email{
+    width: 195px;
     height: 42px;
     font-size: 1rem;
     border: 0px;
+    margin: 0;
+    padding: 0px;
 }
 
-#email, #user_name  {
+#phone , #user_name  {
     width: 270px;
     height: 42px;
     font-size: 1rem;
@@ -160,12 +162,12 @@ body form > p {
     display: flex;
     align-items: center;
     height: 46px;
-    width: 200px;
+    width: 210px;
     background: #FFFFFF;
     border: 1px solid #CACACA;
     border-radius: 4px;
-    padding: 0px 42px 0px 16px;
-    
+    padding: 0px 3px;
+
 }
 
 .address .input_container{
@@ -238,19 +240,17 @@ body form > p {
     color: #CACACA;
 }
 
-.input_wrapper .input_container .timer_item {
-    position: absolute;
-    top:50%;
-    right: 16px;
-    transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    font-style: normal;
+.btn_blue_id-email{
+    background: #219DDE;
+    border: 1px solid #219DDE;
+    box-sizing: border-box;
+    border-radius: 4px;
     font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: -0.25px;
-    color: #333;
+    color: #FFF;
+    cursor: pointer;
+    width: 72px;
+    height: 48px;
+    margin: 0 5px;
 }
 
 .btn_blue{
@@ -263,6 +263,7 @@ body form > p {
     border-radius: 4px;
     font-weight: bold;
     color: #FFF;
+    cursor: pointer;
 }
 
 .btn_white{
@@ -276,6 +277,7 @@ body form > p {
     font-style: normal;
     font-weight: bold;
     color: #219DDE;
+    cursor: pointer;
 }
 
 .btn-signup{
@@ -295,6 +297,7 @@ body form > p {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: -0.25px;
+    cursor: pointer;
 }
 
 .row_area_bir{

@@ -275,21 +275,25 @@ ul.column-list {
 #gansongbohwagak {
 	background-image: url(../images/gansong.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #hunminjeongum {
 	background-image: url(../images/Hunminjeongum.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #miindo {
 	background-image: url(../images/Hyewon-Miindo.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #goryeo {
 	background-image: url(../images/Goryeo_Celadon.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 
@@ -298,20 +302,24 @@ ul.column-list {
 #waryong1 {
 	background-image: url(../images/park_sleepingdragon4.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #waryong2 {
 	background-image: url(../images/waryong_summer.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #waryong3 {
 	background-image: url(../images/waryong_fall.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #waryong4 {
 	background-image: url(../images/waryong_winter.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 
@@ -320,20 +328,24 @@ ul.column-list {
 #simwoojang1 {
 	background-image: url(../images/simwoojang1.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #simwoojang2 {
 	background-image: url(../images/simwoojang2.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #simwoojang3 {
 	background-image: url(../images/simwoojang3.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #simwoojang4 {
 	background-image: url(../images/simwoojang4.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 /* -- 길상사 -- */
@@ -341,20 +353,24 @@ ul.column-list {
 #gilsangsa1 {
 	background-image: url(../images/gilsangsa1.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #gilsangsa2 {
 	background-image: url(../images/gilsansa-bosal.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #gilsangsa3 {
 	background-image: url(../images/gilsangsa2.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #gilsangsa4 {
 	background-image: url(../images/gilsangsa3.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 /* -- 나폴레옹 -- */
 
@@ -362,20 +378,24 @@ ul.column-list {
 	background-image: url(../images/napoleon1.jpg);
 	background-size: 100% 100%;
 	border-radius: 50%;
+	border-radius: 10px;
 }
 #napoleon2 {
 	background-image: url(../images/napoleon2.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #napoleon3 {
 	background-image: url(../images/napoleon3.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #napoleon4 {
 	background-image: url(../images/napoleon4.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 /* -- 성북동 빵공장 -- */
@@ -383,60 +403,72 @@ ul.column-list {
 #factory1 {
 	background-image: url(../images/breadfactory.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #factory2 {
 	background-image: url(../images/cream.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #factory3 {
 	background-image: url(../images/berry.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #factory4 {
 	background-image: url(../images/bread.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 /* -- 성북동 누룽지 백숙 -- */
 
 #baeksuk1 {
 	background-image: url(../images/nurunggibaeksuk.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #baeksuk2 {
 	background-image: url(../images/baeksuk.jpeg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #baeksuk3 {
 	background-image: url(../images/jeon.jpeg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #baeksuk4 {
 	background-image: url(../images/sujebi.jpeg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 /* -- 이강희 곰탕 -- */
 
 #gomtang1 {
 	background-image: url(../images/leegomtang.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 #gomtang2 {
 	background-image: url(../images/gomtang.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #gomtang3 {
 	background-image: url(../images/gobchangjeongol.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 #gomtang4 {
 	background-image: url(../images/haesingomtang.jpg);
 	background-size: 100% 100%;
+	border-radius: 10px;
 }
 
 .modal-custom-button {

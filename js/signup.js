@@ -1,3 +1,14 @@
+let newWindowCheckId;
+const openCheckId= () => {
+  newWindowCheckId = open("checkId.html", "popup", "width=510, height=350, top=300, left=200");
+};
+
+let newWindowCertificationByEmail;
+const openCertEmail= () => {
+  newWindowCertificationByEmail = open("certificationEmail.html", "popup", "width=520, height=500, top=300, left=200");
+};
+
+
 function searchAddress() {
     const width = 500;
     const height = 600;
@@ -53,6 +64,45 @@ function searchAddress() {
     });
 }
 
+document.addEventListener('submit', (e) => {
+    const useridVal = document.querySelector("#id").value;
+    const userpasswordVal = document.querySelector("#password").value;
+    const userpasswordCfVal = document.querySelector("#password_confirm").value;
+    const usernameVal = document.querySelector("#user_name").value;
+    const userphoneVal = document.querySelector("#phone").value;
+    const useremailVal = document.querySelector("#email").value;
+    
+    if(!useridVal) {
+      alert("아이디를 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+    if(!userpasswordVal) {
+      alert("비밀번호를 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+    if(!userpasswordCfVal) {
+      alert("비밀번호 확인을 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+    if(!usernameVal) {
+      alert("이름을 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+    if(!userphoneVal) {
+      alert("전화번호를 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+    if(!useremailVal) {
+      alert("이메일을 작성해주세요.");
+      e.preventDefault();
+      return;
+    }
+  });
  function signUpVaildate(){
     //1.아이디검사
     //아이디의 길이는(6~16자 영문, 숫자포함)
@@ -99,8 +149,63 @@ function searchAddress() {
        return true;
 }
 
-function checkId() {
- ;
+
+
+
+const enrollMemberInfo = () => {
+    console.log("saveGuestbook 호출!");
+    const useridVal = document.querySelector("#id").value;
+    const userpasswordVal = document.querySelector("#password").value;
+    const usernameVal = document.querySelector("#user_name").value;
+    const userphoneVal = document.querySelector("#phone").value;
+    const useremailVal = document.querySelector("#email").value;
+    const useraddressVal = document.querySelector("#address").value + " " + document.querySelector("#address_detail").value + " " + document.querySelector("#extraAddress").value;
+    const usebirthVal = document.querySelector("#year").value + " " + document.querySelector("#month").value + " " + document.querySelector("#day").value;
+
+    // 방명록객체 생성
+    const member = new Member(useridVal, userpasswordVal, usernameVal, userphoneVal, useremailVal, useraddressVal, usebirthVal);
+    // console.log(guestbook);
+
+    // memberList 관리
+    const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
+    
+    memberList.push(member);
+    
+    localStorage.setItem('memberList', JSON.stringify(memberList));
+    
+    // 폼초기화
+    document.querySelector('#signupFrm').reset();
+    
+};
+
+class Member {
+    constructor(userid, userpassword, username, userphone, useremail, useraddress = "", userbirth = "", datetime = Date.now()){
+        this.userid = userid;
+        this.userpassword = userpassword;
+        this.username = username;
+        this.userphone = userphone;
+        this.useremail = useremail;
+        this.useraddress = useraddress;
+        this.userbirth = userbirth;
+        this.datetime = datetime;
+    }
+  }
+
+  function checkId() {
+    const useridVal = document.querySelector("#id").value;
+    const memberList = JSON.parse(localStorage.getItem('memberList'));
+    if(memberList.length == 0){
+        alert("사용할 수 있는 아이디입니다.");
+    }
+    else{
+        for(let i = 0; i < memberList.length; i++){
+            if(memberList[i].userid == useridVal) {
+                alert("중복되는 아이디가 이미 있습니다. 다른 아이디를 사용해주세요.");
+                document.querySelector('#signupFrm').reset();
+            }
+            else {
+                alert("사용할 수 있는 아이디입니다.");
+            }
+        }
+    }
 }
-
-

@@ -38,18 +38,18 @@
 				</aside>
 				<nav>
 					<ul class="navi">
-						<li><a href="aboutme.html">About Me</a></li>
-						<li><a href="seongbukdong.html">Mein Sitz im Leben</a>
+						<li class="mainMenu"><a href="aboutme.html">About Me</a></li>
+						<li class="mainMenu"><a href="seongbukdong.html">Mein Sitz im Leben</a>
 							<div class="subExplorelife">
 								<a href="seongbukdong.html">성북동</a>
 						</li>
-						<li><a href="myroadmap.html">My Roadmap</a></li>
+						<li class="mainMenu"><a href="myroadmap.html">My Roadmap</a></li>
 					</ul>
 				</nav>
 			</header>
 			<section id="content">  
 				<hr class="line2">
-				<form class="form" action="" onsubmit="signUpVaildate();">
+				<form class="form" id="signupFrm" action="" onsubmit="enrollMemberInfo();">
 					<p class="signupTitle">회원정보 입력</p>
 					<div class="signupInfoNecessary">
 						<p class="input_id">
@@ -59,10 +59,10 @@
 						<div class="row_area">
 							<div class="input_wrapper_check">
 								<div class="input_container">
-									<input type="text" id="id" name="id" placeholder="아이디 입력(6~16자 영문)" required>
+									<input type="text" id="id" name="id" placeholder="아이디 입력(6~16자 영문)" required readonly>
 								</div>
 							</div>
-							<button onclick="checkId()" type="button" class="btn_blue">중복 확인</button>
+							<button onclick="openCheckId()" type="button" class="btn_blue_id-email">중복 확인</button>
 						</div>
 						<p class="input_password">
 							비밀번호
@@ -91,33 +91,22 @@
 							휴대폰 번호
 							<span>*</span>
 						</p>
-						<div class="row_area">
-							<div class="input_wrapper_check">
+							<div class="input_wrapper">
 								<div class="input_container">
 									<input type="tel" id="phone" name="phone" placeholder="휴대폰 번호 입력(- 없이)" required>
 								</div>
 							</div>
-							<!-- <button onclick="reqSmsAuth();" type="button" class="btn_white">인증번호 전송</button> -->
-						</div>
-						<!-- <div id="smsauth_check_area" class="row_area">
-							<div class="input_wrapper_certification_num">
-								<div class="input_container_certification">
-									<input type="text" id="smsauth_check_value" name="smsauth_check_value" type="tel" placeholder="인증번호를 입력하세요.">
-									<p id="smsauth_check_count" class="timer_item">03:00</p>
-								</div>
-								<p id="error_smsauth_check" class="error_itme"></p>
-								<p id="success_smsauth_check" class="success_item"></p>
-							</div>
-							<button onclick="checkSmsAuth();" type="button" class="btn_certification">인증</button>
-						</div> -->
 						<p class="input_email">
 							이메일
 							<span>*</span>
 						</p>
-						<div class="input_wrapper">
-							<div class="input_container">
-								<input type="text" id="email" name="email" placeholder="이메일 입력" required>
+						<div class="row_area">
+							<div class="input_wrapper_check">
+								<div class="input_container">
+									<input type="text" id="email" name="email" placeholder="이메일 입력" required>
+								</div>
 							</div>
+							<button onclick="openCertEmail()" type="button" class="btn_blue_id-email">본인 인증</button>
 						</div>
 					</div>
 
@@ -187,7 +176,7 @@
 						</div>
 					</div>
 					<br><br>
-					<button type="submit" class="btn-signup" onclick="">회원가입</button>
+					<button type="submit" class="btn-signup" >회원가입</button>
 				</form>
 				<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 			</section>

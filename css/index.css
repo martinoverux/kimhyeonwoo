@@ -70,7 +70,7 @@ section {
 
 .imagePager {
 	position: absolute;
-	top: 1100px;
+	top: 1130px;
 	left: 791.5px;
 	border: none;
 }
@@ -106,7 +106,7 @@ section {
 	border: none;
 	width: 50px;
 	height: 50px; 
-	top: 1100px;
+	top: 1130px;
 	left: 780px;
 }
 .bx-next { 
@@ -117,7 +117,7 @@ section {
 	border: none;
 	width: 50px;
 	height: 50px;
-	top: 1100px;
+	top: 1130px;
 	right: 770px;
 
 }
