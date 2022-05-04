@@ -134,7 +134,7 @@
       border-radius: 5px;
   }
 
-  #emailId, #certificationNumId {
+  #emailId, #certificationCodeId {
       width: 180px;
       height: 40px;
       font-size: 1rem;

@@ -1,58 +1,50 @@
     // 인증코드 생성
     const generateRandomCode = () => {
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890123456789012345678901234567890123456789';
-        let resultCode= ' ';
+        let resultCode= '';
         const charLen = characters.length;
         for(let i = 0; i < 6; i++ ){
             resultCode += characters.charAt(Math.floor(Math.random() * charLen));
         }
         return resultCode;
     }
+    const VALNAME = opener.document.querySelector("#user_name").value;
+    document.querySelector("#nameId").value = VALNAME;
+    console.log(VALNAME);
 
     const certificationCode = generateRandomCode();
-    function sendCertificationCodeForCert() {
-      const inputName = document.querySelector("#nameId").value;
+    console.log(certificationCode);
+    function sendCertcode() {
+
+      const inputName = VALNAME;
       const inputEmail = document.querySelector("#emailId").value;
+      const certcode = certificationCode;
+
       inputvaildate();
-  
+
+        
       let templateParams  = {
           name : inputName,
           email : inputEmail,
-          message : certificationCode
+          message : certcode
       };
       console.log(templateParams);
       emailjs.send('service_q105rgm', 'template_xtqu1tv', templateParams)
             .then(function(response){
             console.log('Success!', response.status, response.text);
-            setStatus('success');
              }, function(error){
             console.log('Failed...', error);
-            setStatus('fail');
         }); 
     };
   
     function checkCertCode(){
         const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
-        const inputNumber = document.querySelector("#certificationcode").value;
+        const inputCode = document.querySelector("#certificationcode").value;
         const inputEmail = document.querySelector("#emailId").value;
-        if(CERTIFICATIONCODE == inputNumber){
-            for(let i = 0; i < memberList.length; i++){
+        const certcode = certificationCode;
 
-                if(memberList.length ==  0){
-                    alert("본인인증이 완료되었습니다.");
-                    // 본인 인증에 통과된 이메일의 값을 해당 필드에 넣는다.
-                    opener.document.querySelector("#email").value = inputEmail;
-                    // 커서를 주소 필드로 이동한다.
-                    opener.document.querySelector("#address").focus();
-                    // 현재 창 닫기
-                    self.close();
-                } 
-                else{
-                    if(memberList[i].useremail == inputEmail){
-                        alert("입력하신 이메일은 이미 등록된 이메일입니다.");
-                        self.close();
-                    }
-                }
+        if(certcode == inputCode){
+            if(memberList.length ==  0){
                 alert("본인인증이 완료되었습니다.");
                 // 본인 인증에 통과된 이메일의 값을 해당 필드에 넣는다.
                 opener.document.querySelector("#email").value = inputEmail;
@@ -61,6 +53,21 @@
                 // 현재 창 닫기
                 self.close();
             }
+            else {
+                for(let i = 0; i < memberList.length; i++){
+                    if(memberList[i].useremail == inputEmail){
+                        alert("입력하신 이메일은 이미 등록된 이메일입니다.");
+                        self.close();
+                    }
+                } 
+                alert("본인인증이 완료되었습니다.");
+                // 본인 인증에 통과된 이메일의 값을 해당 필드에 넣는다.
+                opener.document.querySelector("#email").value = inputEmail;
+                // 커서를 주소 필드로 이동한다.
+                opener.document.querySelector("#address").focus();
+                    // 현재 창 닫기
+                self.close();
+            } 
         }
         else{
             alert("인증코드가 일치하지 않습니다. 다시 시도해 주세요.");

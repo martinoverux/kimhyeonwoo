@@ -64,7 +64,7 @@ function searchAddress() {
     });
 }
 
-document.addEventListener('submit', (e) => {
+const checkValues = () => {
     const useridVal = document.querySelector("#id").value;
     const userpasswordVal = document.querySelector("#password").value;
     const userpasswordCfVal = document.querySelector("#password_confirm").value;
@@ -74,111 +74,104 @@ document.addEventListener('submit', (e) => {
     
     if(!useridVal) {
       alert("아이디를 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
     if(!userpasswordVal) {
       alert("비밀번호를 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
     if(!userpasswordCfVal) {
       alert("비밀번호 확인을 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
     if(!usernameVal) {
       alert("이름을 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
     if(!userphoneVal) {
       alert("전화번호를 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
     if(!useremailVal) {
       alert("이메일을 작성해주세요.");
-      e.preventDefault();
-      return;
+      return false;
     }
 
         //1.아이디검사
     //아이디의 길이는(6~16자 영문, 숫자포함)
-    if(!/^[a-zA-Z0-9]{6,16}$/.test(id.value)){
+    if(!/^[a-zA-Z0-9]{6,16}$/.test(useridVal)){
         alert('규칙에 맞게 아이디를 6-16자 사이의 숫자를 포함하는 영문자로 만들어 주세요.');
-        e.preventDefault();
-        return;
+        return false;
     }
 
     // a(?=b)    a이후 b가 나오는 것 매칭. b가 뒤따르는 a를 조회(b는 조회만 하고 최종매칭되지 않는다.)
     //2.비밀번호 확인 검사 
     //숫자/문자/특수문자 포함 형태의 8~16자리 이내의 암호 정규식 
-    if(!/(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*])[a-z0-9!@#$%&*]{8,16}/i.test(password.value)){
+    if(!/(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*])[a-z0-9!@#$%&*]{8,16}/i.test(userpasswordVal)){
         alert('규칙에 맞게 비밀번호를 8-16자 사이의 영문, 숫자, 특수문자를 포함시켜 만들어 주세요.');
-        e.preventDefault();
-        return;
+        return false;
     }
 
     //비밀번호일치여부 검사
-    if(!(password.value === password_confirm.value)){
+    if(!(userpasswordVal === userpasswordCfVal)){
         alert('비밀번호가 비밀번호 재입력에 입력된 값과 일치하지 않습니다. 다시 입력해주세요.');
-        e.preventDefault();
-        return;
+        return false;
     }
 
     //3.이름검사 : 한글2글자 이상만 허용. 
     
     // 한글 검사
-    if(!/^[가-힣]{2,}$/.test(user_name.value)){
+    if(!/^[가-힣]{2,}$/.test(usernameVal)){
         alert('이름에는 2글자 이상의 한글만 사용할 수 있습니다.');
-        e.preventDefault();
-        return;
+        return false;
     }
 
     //4. 휴대폰 번호 검사
     // 01x 시작, 총 10~11자리
     // 숫자 여부 검사
     
-    if(!/^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(phone.value)){
+    if(!/^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(userphoneVal)){
         alert('전화번호에는 숫자만 입력해야 합니다.');
-        e.preventDefault();
-        return;
+        return false;
     }
 
     //5.이메일 검사
-    if(!/^[a-z0-9]{4,12}[@].+[.][a-zA-Z]{2,3}$/i.test(email.value)){
+    if(!/^[a-z0-9]{4,12}[@].+[.][a-zA-Z]{2,3}$/i.test(useremailVal)){
         alert('이메일은 @가 포함되어야 하며, 아이디의 길이는 4~12자리이어야 합니다.');
-        e.preventDefault();
-        return;
+        return false;
     }
-  });
+  };
 
+    let newWindow;
     const enrollMemberInfo = () => {
-    console.log("enrollMemberInfo 호출!");
-    const useridVal = document.querySelector("#id").value;
-    const userpasswordVal = document.querySelector("#password").value;
-    const usernameVal = document.querySelector("#user_name").value;
-    const userphoneVal = document.querySelector("#phone").value;
-    const useremailVal = document.querySelector("#email").value;
-    const useraddressVal = document.querySelector("#address").value + " " + document.querySelector("#address_detail").value + " " + document.querySelector("#extraAddress").value;
-    const usebirthVal = document.querySelector("#year").value + " " + document.querySelector("#month").value + " " + document.querySelector("#day").value;
+        checkValues();
+        const day = pluszero(document.querySelector("#day").value);
+        
+        console.log("enrollMemberInfo 호출!");
+        const useridVal = document.querySelector("#id").value;
+        const userpasswordVal = document.querySelector("#password").value;
+        const usernameVal = document.querySelector("#user_name").value;
+        const userphoneVal = document.querySelector("#phone").value;
+        const useremailVal = document.querySelector("#email").value;
+        const useraddressVal = document.querySelector("#address").value + " " + document.querySelector("#address_detail").value + " " + document.querySelector("#extraAddress").value;
+        const usebirthVal = document.querySelector("#year").value + document.querySelector("#month").value + day;
 
-    // 방명록객체 생성
-    const member = new Member(useridVal, userpasswordVal, usernameVal, userphoneVal, useremailVal, useraddressVal, usebirthVal);
-    // console.log(guestbook);
+        // 신규 회원 생성
+        const member = new Member(useridVal, userpasswordVal, usernameVal, userphoneVal, useremailVal, useraddressVal, usebirthVal);
 
-    // memberList 관리
-    const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
+        // memberList 관리
+        const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
+        
+        memberList.push(member);
+        
+        localStorage.setItem('memberList', JSON.stringify(memberList));
+        
+        // 폼초기화
+        document.querySelector('#signupFrm').reset();
+
+        newWindow = open("index.html", "_self", "");
     
-    memberList.push(member);
-    
-    localStorage.setItem('memberList', JSON.stringify(memberList));
-    
-    // 폼초기화
-    document.querySelector('#signupFrm').reset();
-    
-};
+    };
 
 class Member {
     constructor(userid, userpassword, username, userphone, useremail, useraddress = "", userbirth = "", datetime = Date.now()){
@@ -190,5 +183,14 @@ class Member {
         this.useraddress = useraddress;
         this.userbirth = userbirth;
         this.datetime = datetime;
+    }
+  }
+
+  const pluszero = (day) => {
+    if(day < 10) {
+        return day = "0"+ day;
+    }
+    else  {
+        return day
     }
   }

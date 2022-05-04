@@ -34,12 +34,12 @@
                     <div class="pop-id-inner">
                         <label for="emailId"><strong>email</strong></label>	
                         <input type="email" id="emailId" placeholder="이메일을 입력하세요" name="emailId" >
-                        <button type="submit" class="btn" onclick="sendCertificationNumForId()">인증번호 전송</button>
+                        <button type="button" class="btn" onclick="sendCertcodeForId()">인증번호 전송</button>
                     </div>
                     <div class="pop-id-inner">
-                        <label for="certificationNumId"><strong>인증번호</strong></label>	
-                        <input type="text" id="certificationNumId" placeholder="인증번호 6자리" name="certificationNumId" >
-                        <button type="submit" class="btn" onclick="">인증번호 확인</button>
+                        <label for="certificationCodeId"><strong>인증번호</strong></label>	
+                        <input type="text" id="certificationCodeId" placeholder="인증번호 6자리" name="certificationCodeId" >
+                        <button type="button" class="btn" onclick="checkCertCode()">인증번호 확인</button>
                     </div>
                     <div class="pop-id-inner-btn" id="cancel-inner">
                         <button type="button" class="btn-cancel" onclick="self.close();">Close</button>
