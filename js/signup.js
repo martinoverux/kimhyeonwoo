@@ -1,11 +1,11 @@
 let newWindowCheckId;
 const openCheckId= () => {
-  newWindowCheckId = open("checkId.html", "popup", "width=510, height=350, top=300, left=200");
+  newWindowCheckId = open("checkid.html", "popup", "width=510, height=350, top=300, left=200");
 };
 
 let newWindowCertificationByEmail;
 const openCertEmail= () => {
-  newWindowCertificationByEmail = open("certificationEmail.html", "popup", "width=520, height=500, top=300, left=200");
+  newWindowCertificationByEmail = open("certificationemail.html", "popup", "width=520, height=500, top=300, left=200");
 };
 
 
@@ -102,13 +102,13 @@ document.addEventListener('submit', (e) => {
       e.preventDefault();
       return;
     }
-  });
- function signUpVaildate(){
-    //1.아이디검사
+
+        //1.아이디검사
     //아이디의 길이는(6~16자 영문, 숫자포함)
     if(!/^[a-zA-Z0-9]{6,16}$/.test(id.value)){
         alert('규칙에 맞게 아이디를 6-16자 사이의 숫자를 포함하는 영문자로 만들어 주세요.');
-        return false;
+        e.preventDefault();
+        return;
     }
 
     // a(?=b)    a이후 b가 나오는 것 매칭. b가 뒤따르는 a를 조회(b는 조회만 하고 최종매칭되지 않는다.)
@@ -116,12 +116,15 @@ document.addEventListener('submit', (e) => {
     //숫자/문자/특수문자 포함 형태의 8~16자리 이내의 암호 정규식 
     if(!/(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&*])[a-z0-9!@#$%&*]{8,16}/i.test(password.value)){
         alert('규칙에 맞게 비밀번호를 8-16자 사이의 영문, 숫자, 특수문자를 포함시켜 만들어 주세요.');
+        e.preventDefault();
+        return;
     }
 
     //비밀번호일치여부 검사
     if(!(password.value === password_confirm.value)){
         alert('비밀번호가 비밀번호 재입력에 입력된 값과 일치하지 않습니다. 다시 입력해주세요.');
-        return false;
+        e.preventDefault();
+        return;
     }
 
     //3.이름검사 : 한글2글자 이상만 허용. 
@@ -129,7 +132,8 @@ document.addEventListener('submit', (e) => {
     // 한글 검사
     if(!/^[가-힣]{2,}$/.test(user_name.value)){
         alert('이름에는 2글자 이상의 한글만 사용할 수 있습니다.');
-        return false;
+        e.preventDefault();
+        return;
     }
 
     //4. 휴대폰 번호 검사
@@ -138,19 +142,17 @@ document.addEventListener('submit', (e) => {
     
     if(!/^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(phone.value)){
         alert('전화번호에는 숫자만 입력해야 합니다.');
-        return false;
+        e.preventDefault();
+        return;
     }
 
     //5.이메일 검사
     if(!/^[a-z0-9]{4,12}[@].+[.][a-zA-Z]{2,3}$/i.test(email.value)){
         alert('이메일은 @가 포함되어야 하며, 아이디의 길이는 4~12자리이어야 합니다.');
-        return false;
+        e.preventDefault();
+        return;
     }
-       return true;
-}
-
-
-
+  });
 
 const enrollMemberInfo = () => {
     console.log("saveGuestbook 호출!");
@@ -190,22 +192,3 @@ class Member {
         this.datetime = datetime;
     }
   }
-
-  function checkId() {
-    const useridVal = document.querySelector("#id").value;
-    const memberList = JSON.parse(localStorage.getItem('memberList'));
-    if(memberList.length == 0){
-        alert("사용할 수 있는 아이디입니다.");
-    }
-    else{
-        for(let i = 0; i < memberList.length; i++){
-            if(memberList[i].userid == useridVal) {
-                alert("중복되는 아이디가 이미 있습니다. 다른 아이디를 사용해주세요.");
-                document.querySelector('#signupFrm').reset();
-            }
-            else {
-                alert("사용할 수 있는 아이디입니다.");
-            }
-        }
-    }
-}
