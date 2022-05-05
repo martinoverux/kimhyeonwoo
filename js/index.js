@@ -19,9 +19,9 @@ const setTranslate = ({ index, reset }) => {
 
 const activePagination = (index) => {
   [...paginations.children].forEach((pagination) => {
-    pagination.classList.remove('on');
+    pagination.classList.remove('active');
   });
-  paginations.children[index].classList.add('on');
+  paginations.children[index].classList.add('active');
 };
 
 const handlePagination = (e) => {
@@ -36,11 +36,11 @@ const handlePagination = (e) => {
 const makePagination = () => {
   if (items.length > 1) {
     for (let i = 0; i < items.length; i++) {
-      const button = document.createElement('button');
+      const button = document.createElement('li');
       button.dataset.num = i;
       button.classList.add('pagination');
       if (i === 0) {
-        button.classList.add('on');
+        button.classList.add('active');
       }
       paginations.appendChild(button);
       paginations.addEventListener('click', handlePagination);
@@ -113,7 +113,7 @@ const autoplayIterator = () => {
 const autoplay = ({ duration }) => {
   interval = setInterval(autoplayIterator, duration);
 };
-
+    
 const render = () => {
   clickButton();
   makePagination();

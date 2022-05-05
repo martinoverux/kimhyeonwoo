@@ -39,6 +39,7 @@
                 if(memberList[i].userid == useridVal) {
                     alert("중복되는 아이디가 이미 있습니다. 다른 아이디를 사용해주세요.");
                     document.querySelector('#formId').reset();
+                    exit();
                 }
             }
             alert("사용할 수 있는 아이디입니다.");

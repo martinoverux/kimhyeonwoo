@@ -8,6 +8,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	background-color:#fff;
+	height: 310px;
 	padding: 1px 5px;
 	margin: 0px 0px 30px
 }
@@ -28,6 +29,8 @@ header h1 {
 
 header h2 {
 	color: orange;
+	width: 223px;
+	height: 57px;
 	font-size: 40px;
 	font-family: 'Jua', sans-serif;
 	text-shadow: 2px 2px 2px orangered;
@@ -50,7 +53,7 @@ header a {
     font-size: 30px;
 }
 
-header a:hover {
+header a:hover, #my-btn:hover {
 	color: #fff;
 	background-color: rgb(24,189,222);
 }
@@ -69,7 +72,7 @@ header a:hover {
 }
 
 #subTitle {
-	margin: 0px 600px 10px 10px;
+	align-content: flex-start;
 }
 
 ul.navi {
@@ -77,9 +80,10 @@ ul.navi {
 	display: flex;
 	flex-direction: row;
 	justify-content: right;
-	margin-left: 340px;
+	margin: 16px 0px 16px 340px;
 	width: 650px;
 	height: 50px
+	
 }
 
 ul.navi li {
@@ -106,35 +110,59 @@ ul.li div, ul.navi div, header li div {
 }
 
 
-ul.member > li:hover div, ul.navi > li:hover div  {
+ ul.navi > li:hover div  {
 	display: block; 
 }
 
-ul.member {
-	list-style: none; 
+#members{
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: right;
-	padding: 0px;
-	width: 340px;
 }
- 
-ul.member a {
+
+.member-login {
+	display: none;
+	width: 230px;
+	height: 40px;
+	padding: 0px;
+	margin-left: 70px;
+}
+
+.member {
+	display: block;
+	width: 180px;
+	height: 40px;
+	padding: 0px;
+	margin-left: 120px;
+}
+
+#my-a {
+	width: 170px;
+	height: 40px;
 	font-family: 'Jua', sans-serif;
 	font-size: 25px;
 	color: orange;
 	text-shadow: 2px 2px 2px orangered;
 }
 
-ul.member li {
-	border-radius: 25%;
-	list-style: none;
-	text-align: center;
-	width: 6em;
-	height: 2.5em;
+#my-btn {
+	width: 85px;
+	height: 30px;
+	background-color: #fff;
+	border: none;
+	font-family: 'Jua', sans-serif;
+	font-size: 25px;
+	color: orange;
+	text-shadow: 2px 2px 2px orangered;
+	border-radius: 7%;
+
 }
+ 
+.member a {
+	font-family: 'Jua', sans-serif;
+	font-size: 25px;
+	color: orange;
+	text-shadow: 2px 2px 2px orangered;
+}
+
 /* =============================== top-button ================================== */
 
 

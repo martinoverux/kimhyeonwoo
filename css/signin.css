@@ -6,7 +6,7 @@
 }
 
 hr.line2{
-	border-top: 3px solid rgb(24,189,222);
+	border-top: 4px solid rgb(24,189,222);
 	border-radius: 15%;
 	margin: 0px 0px 5px;
 }	
@@ -34,18 +34,6 @@ hr.line2{
     color: #CACACA;
 }
 
-.error-item{
-    display: none;
-    margin: 4px 0px 0px 2px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-    text-align: left;
-    color: #FF1515;
-}
-
 #input-user-id, #input-password  {
     border: 0px;
 }
@@ -68,36 +56,6 @@ button {
     border: none;
     color: white;
 }
-
-/* .checkbox-auto-login-container{
-    text-align: left;
-}
-.checkbox-auto-login-container input[type="checkbox"] {
-    display:none;
-}
-.checkbox-auto-login-container input[type="checkbox"] + label{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: -0.25px;
-}
-.checkbox-auto-login-container input[type="checkbox"] + label span {
-    display:inline-block;
-    width:16px;
-    height:16px;
-    margin-bottom: 2px;
-    margin-right: 6px;
-    vertical-align:middle;
-    cursor:pointer;
-    background:url('/images/') no-repeat;
-    background-size: contain;
-}
-.checkbox-auto-login-container input[type="checkbox"]:checked + label span {
-    background:url('/images/') no-repeat;
-    background-size: contain;
-} */
-
 
 .signinTtitle h3 {
     color:  rgb(24,189,222);
@@ -142,7 +100,7 @@ button {
 
 .row{
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     margin-top: 11px;
     width: 360px;
     height: 40px;
