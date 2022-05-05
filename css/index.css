@@ -44,6 +44,7 @@ section {
 .bx-viewport {
 	position: relative;
 	overflow: hidden;
+	height: 720px;
 	border-radius: 10px;
 }
   
@@ -51,11 +52,15 @@ section {
 	display: flex;
 	transform: translate(0, 0);
 	border-radius: 10px;
+	width: 1024px;
+	height: 720px;
  }
   
 .visual {
 	flex: 0 0 100%;
 	list-style: none;
+	/* width: 1024px;
+	height: 900px; */
 	border-radius: 10px;
 }
   
@@ -129,22 +134,62 @@ section {
 	margin-right: 0.3rem;
 }
 
+#visual-image1{
+	background-image: url("../images/gansong.jpg");	
+	background-size: 100% 100%;
+
+}
+#visual-image2{
+	background-image: url("../images/park_sleepingdragon5.jpg");
+	background-size: 100% 100%;
+}
+#visual-image3{
+	background-image: url("../images/simwoojang1.jpg");
+	background-size: 100% 100%;
+
+}
+#visual-image4{
+	background-image: url("../images/gilsangsa1.jpg");
+	background-size: 100% 100%;
+
+}
+#visual-image5{
+	background-image: url("../images/napoleon4.jpg");
+	background-size: 100% 100%;
+}
+#visual-image6{
+	background-image: url("../images/berry.jpg");
+	background-size: 100% 100%;
+}
+#visual-image7{
+	background-image: url("../images/nurunggibaeksuk.jpg");
+	background-size: 100% 100%;
+
+}
+#visual-image8{
+	background-image: url("../images/leegomtang.jpg");
+	background-size: 100% 100%;
+
+}
+
 .img-title-txt{
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 30px;
+	font-family: 'Jua', sans-serif;
+	font-size: 3.5rem;
     line-height: 30px;
-    color: #000;
+    color: rgb(255, 255, 255);
     font-weight: 400;
     position: relative;
     padding-top: 7px;
 	text-align: center;
+	margin-top: 490px;
+	margin-bottom: 30px;
 }
 
 .img-description-txt {
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 18px;
+	font-family: 'Dongle', sans-serif;
+	font-size: 2.5rem;
     line-height: 30px;
-    color: #000;
+    color: rgb(252, 252, 252);
     font-weight: 400;
     position: relative;
     padding-top: 7px;

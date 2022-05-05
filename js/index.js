@@ -13,8 +13,12 @@ const setTransition = (value) => {
 };
 
 const setTranslate = ({ index, reset }) => {
-  if (reset) list.style.transform = `translate(-${list.clientWidth}px, 0)`;
-  else list.style.transform = `translate(-${(index + 1) * list.clientWidth}px, 0)`;
+  if (reset) {
+    list.style.transform = `translate(-${list.clientWidth}px, 0)`;
+  }
+  else {
+    list.style.transform = `translate(-${(index + 1) * list.clientWidth}px, 0)`;
+  }  
 };
 
 const activePagination = (index) => {
@@ -104,7 +108,7 @@ const autoplayIterator = () => {
       selected = 0;
       setTransition('');
       setTranslate({ reset: true });
-      autoplay({ duration: 2000 });
+      autoplay({ duration: 2500 });
     }, 300);
   }
   if (selected <= lastIndex) activePagination(selected);
@@ -118,8 +122,6 @@ const render = () => {
   clickButton();
   makePagination();
   cloneElement();
-  autoplay({ duration: 2000 });
+  autoplay({ duration: 2500 });
 };
 render();
-
-
