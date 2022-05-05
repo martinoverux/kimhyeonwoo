@@ -49,11 +49,12 @@
             else {
                 for(let i = 0; i < memberList.length; i++){
                     if(memberList[i].useremail == inputEmail){
-                        alert(`본인인증이 완료되었습니다. 회원님의 아이디는 ${memberList[i].id}입니다.`);
+                        alert(`본인인증이 완료되었습니다. 회원님의 아이디는 ${memberList[i].userid}입니다.`);
                         // 커서를 아이디 필드로 이동한다.
                         opener.document.querySelector("#input-user-id").focus();
                         // 현재 창 닫기
                         self.close();
+                        exit();
                     }
                 } 
                 alert("일치하는 정보가 없습니다. 신규가입을 해주세요.");

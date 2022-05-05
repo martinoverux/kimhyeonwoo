@@ -15,14 +15,14 @@
     let newWindow;
 
     function sendCertcodeForPassword() {
-        const inputName = document.querySelector("#idPw").value;
+        const inputId = document.querySelector("#idPw").value;
         const inputEmail = document.querySelector("#emailPw").value;
         const certcode = certificationCode;
 
         inputvaildate();
 
         let templateParams  = {
-            name : inputName,
+            name : inputId,
             email :inputEmail,
             message : certcode,
         }
@@ -36,7 +36,8 @@
 
     const checkCertCode = () => {
         const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
-        const inputCode = document.querySelector("#certificationCodeId").value;
+        const inputId = document.querySelector("#idPw").value;
+        const inputCode = document.querySelector("#certificationCodePw").value;
         const inputEmail = document.querySelector("#emailPw").value;
         const certcode = certificationCode;
 
@@ -50,15 +51,13 @@
             }
             else {
                 for(let i = 0; i < memberList.length; i++){
-                    if(memberList[i].useremail == inputEmail){
-                        alert(`본인인증이 완료되었습니다. 회원님의 회원님의 비밀번호를 재설정해주세요.`);
+                    if(memberList[i].useremail == inputEmail && memberList[i].userid == inputId){
+                        alert(`본인인증이 완료되었습니다. ${inputId} 회원님의 비밀번호를 재설정해주세요.`);
                         // 비밀번호 재설정 창으로 이동
+                        localStorage.setItem('id', inputId);
                         newWindow = open("resetPassword.html", "_self", "");
                     }
                 } 
-                alert("일치하는 정보가 없습니다. 신규가입을 해주세요.");
-                // 현재 창 닫기
-                self.close();
             } 
         }
         else{
@@ -66,7 +65,7 @@
         }
     }
 
-function inputVaildate(){
+function inputvaildate(){
     const userIdVal = document.querySelector("#idPw").value;
     const useremailVal = document.querySelector("#emailPw").value;
 

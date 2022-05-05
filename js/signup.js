@@ -64,6 +64,7 @@ function searchAddress() {
     });
 }
 
+// 검사
 const checkValues = () => {
     const useridVal = document.querySelector("#id").value;
     const userpasswordVal = document.querySelector("#password").value;
@@ -142,6 +143,7 @@ const checkValues = () => {
     }
   };
 
+  // 신규회원 등록 함수
     let newWindow;
     const enrollMemberInfo = () => {
         checkValues();
@@ -169,6 +171,7 @@ const checkValues = () => {
         // 폼초기화
         document.querySelector('#signupFrm').reset();
 
+        // 현재 창에서 페이지 이동
         newWindow = open("index.html", "_self", "");
     
     };
@@ -186,6 +189,7 @@ class Member {
     }
   }
 
+  // 생년월일 중 일이 10보다 작을 때 0을 추가하는 함수
   const pluszero = (day) => {
     if(day < 10) {
         return day = "0"+ day;

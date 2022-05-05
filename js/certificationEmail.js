@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function(){
+    const parentname = opener.document.querySelector("#user_name").value;
+    document.querySelector("#nameId").value = parentname;
+});
+    
     // 인증코드 생성
     const generateRandomCode = () => {
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890123456789012345678901234567890123456789';
@@ -8,20 +13,17 @@
         }
         return resultCode;
     }
-    const VALNAME = opener.document.querySelector("#user_name").value;
-    document.querySelector("#nameId").value = VALNAME;
-    console.log(VALNAME);
+    
 
     const certificationCode = generateRandomCode();
     console.log(certificationCode);
     function sendCertcode() {
-
-      const inputName = VALNAME;
+      
+      const inputName =  document.querySelector("#nameId").value;
       const inputEmail = document.querySelector("#emailId").value;
       const certcode = certificationCode;
 
       inputvaildate();
-
         
       let templateParams  = {
           name : inputName,

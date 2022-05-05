@@ -73,7 +73,7 @@
     margin: 20px 
 }
 
-.btn-confirm, .btn-cancel {
+.btn-cancel {
     font-family: 'Dongle', sans-serif;
 	font-size: 1.5rem;
     width: 82px;

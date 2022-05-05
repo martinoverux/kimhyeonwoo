@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function(){
+    const parentid = localStorage.getItem('id');
+    document.querySelector("#idre").value = parentid;
+    localStorage.removeItem('id');
+});
+
+
 function signUpVaildate(){
     const userpasswordVal = document.querySelector("#password").value;
     const userpasswordCfVal = document.querySelector("#passwordCheck").value;
@@ -26,20 +33,10 @@ function signUpVaildate(){
       }
 }
 
-function resetPassword(){
-    const inputEmail = opener.document.querySelector("#emailPw").value;
+function resetpassword(){
+    const inputId = document.querySelector("#idre").value
     const inputPasword = document.querySelector("#password").value;
     const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
-    
-
-        // 중복검사에 통과된 아이디의 값을 해당 필드에 넣는다.
-        opener.document.querySelector("#id").value = useridVal;
-        
-        // 커서를 비밀번호 필드로 이동한다.
-        opener.document.querySelector("#password").focus();
-    
-        // 현재 창 닫기
-        self.close();
 
         if(memberList.length == 0){
             alert("정보를 확인할 수 없습니다. 신규가입을 해주세요.");
@@ -48,25 +45,20 @@ function resetPassword(){
         }
         else {
             for(let i = 0; i < memberList.length; i++){
-                if(memberList[i].useremail == inputEmail){
+                if(memberList[i].userid == inputId){
 
                     const member = new Member(memberList[i].userid, inputPasword, memberList[i].username, memberList[i].userphone, memberList[i].useremail, memberList[i].useraddress,  memberList[i].userbirth,  memberList[i].datetime);
+                    memberList[i] = member;
+                    localStorage.setItem('memberList', JSON.stringify(memberList));
 
-                    memberList.push(member);
                     alert(`비밀번호 재설정이 완료되었습니다.`);
                     
                     // 현재 창 닫기
                     self.close();
                 }
             } 
-            alert("일치하는 정보가 없습니다. 신규가입을 해주세요.");
-            // 현재 창 닫기
-            self.close();
-            } 
+        } 
     }
-    // const memberList = JSON.parse(localStorage.getItem('memberList')) || [];
-    // const member = new Member("qwerty", "asdf456654!", "김현우", "01012341234", "veraxanimus@naver.com", "서울 성북구 보문로 168 5층  (삼선동5가)", "1992038", 1651699391846);
-    // memberList.push(member);
 
     class Member {
         constructor(userid, userpassword, username, userphone, useremail, useraddress = "", userbirth = "", datetime = Date.now()){

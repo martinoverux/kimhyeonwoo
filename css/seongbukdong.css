@@ -159,10 +159,11 @@ ul.column-list {
 
 .content-title p {
 	color: orange;
-	font-size: 2rem;
+	font-size: 50px;
 	font-family: 'Jua', sans-serif;
 	text-shadow: 2px 2px 2px orangered;
 	text-align: center;
+	margin: 40px;
 }
 
 /* ============================== 탭 메뉴 ======================================== */
@@ -258,6 +259,7 @@ ul.column-list {
 	font-family: 'jua', sans-serif;
 	font-style: italic;
 	font-size: 50px;
+	margin: 40px;
 	text-shadow: 4px 2px 0px orange;
 }
 .default-image {
