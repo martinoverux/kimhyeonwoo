@@ -1,107 +1,125 @@
-document.addEventListener("DOMContentLoaded", function(){
-// 변수 선언
-const sliderWrapper = document.querySelector('.bx-viewport'), // 슬라이드 전체 컨테이너
-      sliderContainer = document.querySelector('.slider-box'), // 슬라이드 아이템 컨테이너
-      btnPrev = document.querySelector('.bx-prev'), // 이전 버튼
-      btnNext = document.querySelector('.bx-next'), // 다음 버튼
-      pagerContainer = document.querySelector('.imagePager');
-
-let slides = document.querySelectorAll('.visual'), // 슬라이드 아이템
-    slideCount = slides.length, // 슬라이드 갯수
-    currentIndex = 0, // 현재 슬라이드
-    timer = undefined,
-    pagerHTML = '';
+const list = document.querySelector('.slider-box');
+const items = document.querySelectorAll('.visual');
+const btnPrev = document.querySelector('.bx-prev');
+const btnNext = document.querySelector('.bx-next');
+const paginations = document.querySelector('.paginations');
+const lastIndex = items.length - 1;
+let selected = 0;
+let interval;
 
 
+const setTransition = (value) => {
+  list.style.transition = value;
+};
 
+const setTranslate = ({ index, reset }) => {
+  if (reset) list.style.transform = `translate(-${list.clientWidth}px, 0)`;
+  else list.style.transform = `translate(-${(index + 1) * list.clientWidth}px, 0)`;
+};
 
-// 슬라이드 아이템 자동으로 가로 정렬 및 갯수만큼 페이지네이션 버튼 자동 생성
-for(let i = 0; i < slideCount; i++) {
-  slides[i].style.left = `${i * 100}%`;
-  pagerHTML += `<li data-index="${i}"></li>`;
+const activePagination = (index) => {
+  [...paginations.children].forEach((pagination) => {
+    pagination.classList.remove('on');
+  });
+  paginations.children[index].classList.add('on');
+};
 
-  pagerContainer.innerHTML = pagerHTML;
-}
-  let pagerBtns = document.querySelectorAll('.imagePager li');
-
-// 이미지 전환을 매끄럽게 하기 위한 이미지 복사 함수
-  
-// const cloneElement = () => { 
-//   sliderContainer.prepend(slides[slides.length -1].cloneNode(true)); 
-//   sliderContainer.append(slides[0].cloneNode(true)); 
-// };  
-// cloneElement();
-
-  // 슬라이드 이동 함수
-  function goToSlide(idx) {
-
-    sliderContainer.classList.add('animated');
-    sliderContainer.style.left = `${idx * -100}%`;
-    currentIndex = idx;
-    
-    pagerBtns.forEach(pagerBtn => {
-      pagerBtn.classList.remove('active');
-    });
-    pagerBtns[idx].classList.add('active');
+const handlePagination = (e) => {
+  if (e.target.dataset.num) {
+    selected = parseInt(e.target.dataset.num);
+    setTransition('all 0.3s linear');
+    setTranslate({ index: selected });
+    activePagination(selected);
   }
-  
-  goToSlide(0);
+};
 
-  // 버튼을 클릭시 슬라이드 이동
-  btnPrev.addEventListener('click', () => {
-    if(currentIndex != 0) {
-      goToSlide(currentIndex - 1);
-    } else {
-      goToSlide(slideCount - 1);
+const makePagination = () => {
+  if (items.length > 1) {
+    for (let i = 0; i < items.length; i++) {
+      const button = document.createElement('button');
+      button.dataset.num = i;
+      button.classList.add('pagination');
+      if (i === 0) {
+        button.classList.add('on');
+      }
+      paginations.appendChild(button);
+      paginations.addEventListener('click', handlePagination);
     }
-  });
-  btnNext.addEventListener('click', () => {
-    if(currentIndex < slideCount - 1) {
-      goToSlide(currentIndex + 1);
-    } else {
-      goToSlide(0);
-    }
-  });
-
-// 버튼 기능 업데이트 함수
-function updateNav() {
-  if(currentIndex == 0) {
-    btnPrev.classList.add('disabled');
-  }else {
-    btnPrev.classList.remove('disabled');
   }
-  if(currentIndex == slideCount - 1) {
-    btnNext.classList.add('disabled');
-  }else {
-    btnNext.classList.remove('disabled');
+};
+
+
+const handlePrev = () => {
+  selected -= 1;
+  setTransition('transform 0.3s linear');
+  setTranslate({ index: selected });
+  if (selected < 0) {
+    selected = lastIndex;
+    setTimeout(() => {
+      setTransition('');
+      setTranslate({ index: selected });
+    }, 300);
   }
-}
+  if (selected >= 0) activePagination(selected);
+};
 
-// 자동 슬라이드 함수
-function startAutoSlide() {
-  timer = setInterval(() => {
-    let nextIndex = (currentIndex + 1) % slideCount;
-    goToSlide(nextIndex);
-  }, 3000);
-}
-startAutoSlide();
+const handleNext = () => {
+  console.log(selected);
+  selected += 1;
+  setTransition('transform 0.3s linear');
+  setTranslate({ index: selected });
+  if (selected > lastIndex) {
+    selected = 0;
+    setTimeout(() => {
+      setTransition('');
+      setTranslate({ index: selected });
+    }, 300);
+  }
+  if (selected <= lastIndex) activePagination(selected);
+};
 
-sliderWrapper.addEventListener('mouseenter', () => {
-  clearInterval(timer);
-});
-sliderWrapper.addEventListener('mouseleave', () => {
-  startAutoSlide();
-});
+const clickButton = () => {
+  if (items.length > 1) {
+    btnPrev.addEventListener('click', handlePrev);
+    btnNext.addEventListener('click', handleNext);
+  }
+};
 
-// 페이지네이션 클릭 시 슬라이드 이동 함수 호출
-pagerBtns.forEach(pagerBtn => {
-  pagerBtn.addEventListener('click', (event) => {
-      console.log(event.target);
-    let pagerNum = event.target.dataset.index;
-    goToSlide(pagerNum);
-  });
-});
-});
 
+const cloneElement = () => {
+  list.prepend(items[lastIndex].cloneNode(true));
+  list.append(items[0].cloneNode(true));
+  setTranslate({ reset: true });
+};
+
+
+const autoplayIterator = () => {
+  selected += 1;
+  setTransition('all 0.3s linear');
+  setTranslate({ index: selected });
+  if (selected > lastIndex) {
+    activePagination(0);
+    clearInterval(interval);
+    setTimeout(() => {
+      selected = 0;
+      setTransition('');
+      setTranslate({ reset: true });
+      autoplay({ duration: 2000 });
+    }, 300);
+  }
+  if (selected <= lastIndex) activePagination(selected);
+};
+
+const autoplay = ({ duration }) => {
+  interval = setInterval(autoplayIterator, duration);
+};
+
+const render = () => {
+  clickButton();
+  makePagination();
+  cloneElement();
+  autoplay({ duration: 2000 });
+};
+render();
 
 

@@ -9,7 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dongle:wght@300;400;700&family=Gamja+Flower&family=Jua&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">	
 	<link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
     <title>index</title>
 </head>
     <body>
@@ -52,11 +52,9 @@
 				<div class="main-visual-wrap" id="main-visual">
 				  <div class="main-visual">
 					<div class="bx-wrapper">
-						<div class="bx-viewport">
+						<!-- <div class="bx-viewport">
 							<div class="slider-box">
-								<div class="visual">
-									<img src="./images/gansong.jpg" alt="간송미술관">
-								</div>
+								<div class="visual"><img src="./images/gansong.jpg" alt="간송미술관"></div>
 								<div class="visual"><img src="./images/park_sleepingdragon5.jpg" alt="와룡공원"></div>
 								<div class="visual"><img src="./images/simwoojang1.jpg" alt="심우장"></div>
 								<div class="visual"><img src="./images/gilsangsa1.jpg" alt="길상사"></div>
@@ -65,13 +63,42 @@
 								<div class="visual"><img src="./images/nurunggibaeksuk.jpg" alt="성북동 누룽지 백숙"></div>
 								<div class="visual"><img src="./images/leegomtang.jpg" alt="이강희 곰탕"></div>
 							</div>
-						</div>
+						</div> -->
+						<div class="bx-viewport">
+							<ul class="slider-box">
+								<li class="visual">
+									<img class="visual-image" img src="./images/gansong.jpg" alt="간송미술관"/>
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/park_sleepingdragon5.jpg" alt="와룡공원"/>
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/simwoojang1.jpg" alt="심우장" />
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/gilsangsa1.jpg" alt="길상사" />
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/napoleon4.jpg" alt="나폴레옹 케이크" />
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/berry.jpg" alt="성북동 빵공장 딸기 팡도르" />
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/nurunggibaeksuk.jpg" alt="성북동 누룽지 백숙" />
+								</li>
+								<li class="visual">
+									<img class="visual-image" src="./images/leegomtang.jpg" alt="이강희 곰탕" />
+								</li>
+							</ul>
+							
+						  </div>
+						
 					</div>
 				</div>
 				<div class="bx-controls">
 					<button type="button" class="bx-prev"></button>
-					<ul class="imagePager">
-					</ul>
+					<div class="paginations"></div>
 					<button type="button" class="bx-next"></button>
 				</div>
 			</div>
@@ -85,5 +112,6 @@
 			</footer>
 		</div>
 		<script src="./js/common.js"></script>
+		<script src="./js/index.js"></script>
     </body>
 </html>
