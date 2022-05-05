@@ -1,12 +1,13 @@
-const adminCheck = (memberList = JSON.parse(localStorage.getItem('memberList'))) => {
+const adminCheck = () => {
     const inputidVal = document.querySelector("#adminId").value;
-    for(let i = 0; i < memberList.length; i++){
-        if(memberList[i].userid == inputidVal) {
-            alert("관리자로 확인되었습니다. 조회를 시작합니다.");
-            document.querySelector('#formmemberquery').reset();
-            renderMemberInfo();
+        if(inputidVal != "administrator") {
+          alert("관리자가 아닙니다. 관리자만 접속할 수 있습니다.")
         }
-    }
+        else{
+          alert("관리자로 확인되었습니다. 조회를 시작합니다.");
+          document.querySelector('#formmemberquery').reset();
+          renderMemberInfo();         
+        }
 };
 
 

@@ -15,5 +15,6 @@ const logout = () => {
   member.style.display = "block";
   const memberlogin = document.querySelector('.member-login');
   memberlogin.style.display = "none";
+  newWindow = open("index.html", "_self", "");
 }
 

@@ -173,6 +173,8 @@ const checkValues = () => {
 
         // 현재 창에서 페이지 이동
         newWindow = open("index.html", "_self", "");
+        
+        alert(`${usernameVal}님 회원가입이 완료되었습니다.`);
     
     };
 
