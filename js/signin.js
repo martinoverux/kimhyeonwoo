@@ -14,27 +14,36 @@
   };
 
 
-  document.addEventListener('submit', (memberList = JSON.parse(localStorage.getItem('memberList'))) => {
+ function login(){
+    const memberList = JSON.parse(localStorage.getItem('memberList'));
     const inputidVal = document.querySelector("#input-user-id").value;
     const inputpasswordVal = document.querySelector("#input-password").value;
-    for(let i = 0; i < memberList.length; i++){
-        if(memberList[i].userid == inputidVal && memberList[i].userpassword == inputpasswordVal) {
-            const loginuser = new User(inputidVal, inputpasswordVal);
-            sessionStorage.setItem("user", JSON.stringify(loginuser));
-            alert(`${memberList[i].username}님 환영합니다!`);
-            document.querySelector('#login-form').reset();
-            loginIndex();
-        }
+    console.log(inputidVal, inputpasswordVal);
+    let loginIndexHtml;
+    if(!memberList.length){
+      document.querySelector('#login-form').reset();
+      alert("확인되지 않습니다. 없는 아이디이거나 아이디나 비밀번호를 잘못 입력하였습니다.");
     }
-  });
+    else{
+      for(let i = 0; i < memberList.length; i++){
+        if(memberList[i].userid == inputidVal && memberList[i].userpassword == inputpasswordVal) {
+            console.log(memberList[i].userid, inputpasswordVal);
+              const loginuser = new User(inputidVal, inputpasswordVal);
+              sessionStorage.setItem("loginuser", JSON.stringify(loginuser));
+              alert(`${memberList[i].username}님 환영합니다!`);
+              loginIndexHtml =  open("index.html", "_self", "");
+              document.querySelector('#login-form').reset();
+              exit();
+            }
+          }
+      document.querySelector('#login-form').reset();
+      alert("확인되지 않습니다. 없는 아이디이거나 아이디나 비밀번호를 잘못 입력하였습니다.");
+    }
+  }
 
   class User {
     constructor(userid, userpassword){
         this.userid = userid;
         this.userpassword = userpassword;
     }
-  }
-
-  function loginIndex() {
-    location.href = "index.html";
   }

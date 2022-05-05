@@ -1,21 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  if(sessionStorage.getItem(loginuser)){
-    const member = document.querySelector('.member');
-    member.style.display = "none";
-    const memberlogin = document.querySelector('.member-login');
-    memberlogin.style.display = "block";
-  }
-});
-
-const logout = () => {
-  sessionStorage.clear();
-  const member = document.querySelector('.member');
-  member.style.display = "block";
-  const memberlogin = document.querySelector('.member-login');
-  memberlogin.style.display = "none";
-}
-
-
 // top 버튼
 topBtn = document.getElementById("topBtn");
 

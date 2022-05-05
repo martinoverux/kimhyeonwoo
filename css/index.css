@@ -44,16 +44,19 @@ section {
 .bx-viewport {
 	position: relative;
 	overflow: hidden;
+	border-radius: 10px;
 }
   
 .slider-box {
 	display: flex;
 	transform: translate(0, 0);
+	border-radius: 10px;
  }
   
 .visual {
 	flex: 0 0 100%;
 	list-style: none;
+	border-radius: 10px;
 }
   
 .visual-image {
@@ -61,6 +64,7 @@ section {
 	width: 1024px; 
 	height: 720px;
 	object-fit: cover;
+	border-radius: 10px;
 }
   
 .bx-prev { 

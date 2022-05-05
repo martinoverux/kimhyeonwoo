@@ -64,25 +64,25 @@
 							<br><br><br>
 								<form id="login-form" class="form-area">
 									<div class="input-wrapper">
-										<div class="input-container id-input">
+										<div class="input-container">
 											<input id="input-user-id" type="text" name="userId" placeholder="아이디" required>
 										</div>
 									</div>
 									<div class="input-wrapper">
-										<div class="input-container password-input">
+										<div class="input-container">
 											<input id="input-password" name="password" type="password" placeholder="비밀번호" required>
 										</div>
 									</div>
 	
 									<div class="row">
 										<div class="openBtn">
-											<button class="openButton" onclick="memberquery()">회원 목록 조회</button>
-											<button class="openButton" onclick="openFindId()">아이디 찾기</button>
-											<button class="openButton" onclick="openFindPassword()">비밀번호 찾기</button>
+											<button type="button" class="openButton" onclick="memberquery()">회원 목록 조회</button>
+											<button type="button" class="openButton" onclick="openFindId()">아이디 찾기</button>
+											<button type="button" class="openButton" onclick="openFindPassword()">비밀번호 찾기</button>
 										</div>
 									</div>
 									<br><br>
-									<button type="submit" class="btn-login">로그인</button>
+									<button type="button" id="btn-login" onclick="login();">로그인</button>
 								</form>
 						</div>
 					</article>
@@ -97,5 +97,6 @@
 			</footer>
 		</div>
 		<script src="./js/common.js"></script>
+		<script src="./js/loginout.js"></script>
     </body>
 </html>
