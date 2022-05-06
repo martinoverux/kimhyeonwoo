@@ -29,7 +29,7 @@ section {
 
 .bx-controls {
 	width: 1024px;
-	height: 50px;
+	height: 0px;
 }
 
 .bx-wrapper {
@@ -59,8 +59,6 @@ section {
 .visual {
 	flex: 0 0 100%;
 	list-style: none;
-	/* width: 1024px;
-	height: 900px; */
 	border-radius: 10px;
 }
   
@@ -81,7 +79,7 @@ section {
 	width: 50px;
 	height: 50px; 
 	top: 1095px;
-	left: 890px;
+	left: 770px;
 }
 
 .bx-next { 
@@ -93,7 +91,7 @@ section {
 	width: 50px;
 	height: 50px;
 	top: 1095px;
-	right: 880px;
+	right: 770px;
 }
 
 .bx-prev:hover { 
@@ -107,7 +105,7 @@ section {
 .paginations {
 	position: absolute;
 	top: 1110px;
-	left: 937.223px;
+	left: 804.715px;
 	border: none;
 }
   
